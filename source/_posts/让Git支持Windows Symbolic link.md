@@ -1,9 +1,7 @@
 ---
 title: Symbolic Links|符号链接
 date: 2018-08-10 18:22:34
-tags:
-- git
-- symbolic links
+tags: [git,symbolic links]
 ---
 
 

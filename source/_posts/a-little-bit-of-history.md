@@ -1,7 +1,7 @@
 ---
 title: 浏览器的history
 date: 2018-09-25 13:24:33
-tags: 
+tags: [浏览器,history,web,翻译]
 ---
 
 
@@ -10,7 +10,7 @@ tags:
 
 If you wish to understand React Router, you must first study history. More specifically, the [history](https://github.com/ReactTraining/history) package, which provides the core functionality for React Router. It enables projects to easily add location based navigation on the client-side, which is essential for single page applications.
 
-> 如果你想要理解 React Router，那你必须先学习 history。具体来说，是[history](https://github.com/ReactTraining/history)包，它提供了 React Router 的核心功能。它允许项目轻松的在客户端添加基于位置(location)的导航，这对但页面应用来说是至关重要的。
+> 如果你想要理解 React Router，那你必须先学习 history。具体来说，是  [history](https://github.com/ReactTraining/history)  包，它提供了 React Router 的核心功能。它允许项目轻松的在客户端添加基于位置(location)的导航，这对但页面应用来说是至关重要的。
 
 <!--more-->
 
@@ -42,17 +42,17 @@ No matter which type of history you create, you will end up with an object that 
 
 #### Location 位置
 
-The most important property of a history object is the location. The location object reflects “where” your application currently is. It contains a number of properties that are derived from a URL. These are `pathname`, `search`[1], and `hash`.
+The most important property of a history object is the location. The location object reflects “where” your application currently is. It contains a number of properties that are derived from a URL. These are `pathname` ,  `search` [1], and `hash`.
 
-> history 对象最重要的属性是location。location对象反映了你的应用程序当前所在的位置。它包含了从URL派生过来的若干属性。即`pathname`,`search`[1] ,和`hash`。
+> history 对象最重要的属性是location。location对象反映了你的应用程序当前所在的位置。它包含了从URL派生过来的若干属性。即 `pathname` , `search`[1] ,和 `hash`。
 
 Additionally, each location has a unique `key` property associated with it. This key can be used to identify and store data specific to a location.
 
-> 另外，每个location都有一个唯一的`key`属性关联与之关联。这个`key`可以被用于标识和存储与特定location相关的数据
+> 另外，每个location都有一个唯一的 `key` 属性关联与之关联。这个 `key` 可以被用于标识和存储与特定location相关的数据
 
 Finally, a location can have `state` associated with it. This provides a means of attaching data to a location that is not present in the URL.
 
-> 最后，一个location还能有一个`state`与之关联。它提供了一种将数据附加到URL中没有出现的位置的方法。
+> 最后，一个location还能有一个 `state`  与之关联。它提供了一种将数据附加到URL中没有出现的位置的方法。
 
 ```
 {
@@ -142,7 +142,7 @@ history.goBack()
 history.goForward()
 ```
 
-`go` is a more powerful combination of `goBack` and `goForward`. Negative numbers passed to the method will be used to go backwards in the array, and positive numbers will be used to go forward.
+`go` is a more powerful combination of  `goBack` and  `goForward` . Negative numbers passed to the method will be used to go backwards in the array, and positive numbers will be used to go forward.
 
 > `go` 是 `goBack` 与 `goForward` 的更强大的组合。传给这个方法的负数会被用于在数组中回退，整数会被用于前进。
 

@@ -1,7 +1,7 @@
 ---
 title: 探索 JavaScript For-in 循环
 date: 2018-7-14 19:23:42
-tags: FE;javascript
+tags: [FE,javascript]
 ---
 
 For-in 循环是对象属性迭代技术中唯一一项可以跨浏览器的。 关于使用 `for-in` 循环迭代数组的危险性以及何时使用 `hasOwnPropert` 过滤器的文章有很多，但是美中不足的是，关于这些普遍使用的语言结构的文章又出奇的不完整。本文尝试着填补一些空白，希望能对读者有所帮助。
@@ -196,7 +196,7 @@ for (var prop in obj) {
 result.toString();
 //Chrome -&gt; "1,2,3,foo"
 //Other browsers -&gt; "3,2,foo,1"
-```
+ ```
 
 这个被记录下来的bug，有大量充满争议的评论在讨论这个bug是否应该被修复。我认为这个bug应该被修复。根据定义，常规对象的属性确定是无序的，并且ECMA也没有定义出一个标准 - 但 John Resig 和 Charles Kendrick 指出，ECMA标准的缺失不能成为借口 - 标准通常都是遵循实现的，而不是反过来 - 在这个例子中，chrome的处理是不合适的。
 

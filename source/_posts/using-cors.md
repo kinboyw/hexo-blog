@@ -1,10 +1,7 @@
 ---
 title: 使用跨域资源共享
 date: 2018-08-11 21:18:43
-tags:
-- cors
-- 浏览器跨域
-- web
+tags: [CORS,web,浏览器跨域]
 ---
 
 

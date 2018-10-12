@@ -4,9 +4,7 @@ date: 2018-7-21 13:24:33
 tags: git
 ---
 
-[
-
-git init](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init) [git clone](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone) [git config](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config)
+[git init](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init)   [git clone](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone)   [git config](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config)
 
 本教程主要覆盖的几点如下:
 

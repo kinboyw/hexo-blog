@@ -1,7 +1,7 @@
 ---
 title: CentOS 7.4 配置路由网关服务器
 date:  2018.09.07
-tags: vpn;linux
+tags: [vpn,linux]
 ---
 
 
