@@ -1,0 +1,15 @@
+[submodule "themes/hexo-theme-archer"]
+	path = themes/hexo-theme-archer
+	url = https://github.com/fi3ework/hexo-theme-archer.git
+[submodule "hexo-theme-tranquilpeak"]
+	path = hexo-theme-tranquilpeak
+	url = https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git
+[submodule "themes/next"]
+	path = themes/next
+	url = https://github.com/iissnan/hexo-theme-next
+[submodule "themes/hexo-theme-tranquilpeak"]
+	path = themes/hexo-theme-tranquilpeak
+	url = https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak.git
+[submodule "themes/yilia"]
+	path = themes/yilia
+	url = https://github.com/litten/hexo-theme-yilia.git
