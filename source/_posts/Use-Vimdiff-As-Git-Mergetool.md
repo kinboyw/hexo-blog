@@ -2,6 +2,8 @@
 title: 使用vimdiff作为git mergetool
 date: 2018-10-09 13:24:33
 tags: [vim,git]
+categories: 
+- [Git]
 ---
 
 译自：[Use vimdiff as git mergetool](http://www.rosipov.com/blog/use-vimdiff-as-git-mergetool/)

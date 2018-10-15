@@ -2,13 +2,15 @@
 title: 浏览器是如何工作的
 date: 2018-7-17 13:24:33
 tags: FE 
+categories: 
+- [前端]
 ---
 
 
 
 Web browsers are probably the most widely used software. In this book I will explain how they work behind the scenes. We will see what happens when you type 'google.com' in the address bar until you see the Google page on the browser screen.
 
-浏览器可能是使用最广泛的软件了。我将在这本书里解释浏览器后台是如何工作的。我们将会看到从你在浏览器的地址栏里敲下 'google.com' 直到你看到浏览器窗口里显示出Google的网页之间发生了什么。
+> 浏览器可能是使用最广泛的软件了。我将在这本书里解释浏览器后台是如何工作的。我们将会看到从你在浏览器的地址栏里敲下 'google.com' 直到你看到浏览器窗口里显示出Google的网页之间发生了什么。
 
 ### The browsers we will talk about 我们将要谈到的浏览器
 
@@ -18,11 +20,11 @@ According to the [W3C browser statistics](http://www.w3schools.com/browsers/brow
 
 So nowdays open source browsers are a substantial part of the browser business。
 
-当今主流的浏览器一共有5种，分别是 Internet Explorer, FireFox, Safari, Chrome 以及 Opera。
+> 当今主流的浏览器一共有5种，分别是 Internet Explorer, FireFox, Safari, Chrome 以及 Opera。
 
-我将从一些开源浏览器种给出示例，FireFox，Chrome，Safari这几种是部分开源的。
+> 我将从一些开源浏览器种给出示例，FireFox，Chrome，Safari这几种是部分开源的。
 
-根据[W3C 浏览器统计](http://www.w3schools.com/browsers/browsers_stats.asp)，目前（2009年10月），FireFox，Safari以及Chrome一共占据了浏览器将近60%的市场份额。
+> 根据[W3C 浏览器统计](http://www.w3schools.com/browsers/browsers_stats.asp)，目前（2009年10月），FireFox，Safari以及Chrome一共占据了浏览器将近60%的市场份额。
 
 所以现在开源浏览器是浏览器业务的重要组成部分。
 
@@ -32,83 +34,119 @@ So nowdays open source browsers are a substantial part of the browser business�
 
 The browser main functionality is to present the web resource you choose, by requesting it from the server and displaying it on the browser window. The resource format is usually HTML but also PDF, image and more. The location of the resource is specified by the user using a URI (Uniform resource Identifier). More on that in the network chapter.
 
-浏览器的主要功能是通过向服务器发出请求并将结果显示在浏览器窗口的方式展示用户选择的网络资源。常见网络资源的格式是HTML，当然也有PDF，image等等。这些资源在网络中的位置是用户通过URI（Uniform resource Identifier）指定的。在网络的章节会详细说明。
+> 浏览器的主要功能是通过向服务器发出请求并将结果显示在浏览器窗口的方式展示用户选择的网络资源。常见网络资源的格式是HTML，当然也有PDF，image等等。这些资源在网络中的位置是用户通过URI（Uniform resource Identifier）指定的。在网络的章节会详细说明。
 
 The way the browser interprets and displays HTML files is specified in the HTML and CSS specifications. These specifications are maintained by the W3C (World Wide Web Consortium) organization, which is the standards organization for the web. 
 
-浏览器解释和显示HTML文件的方式是在HTML和CSS规范中指定的。这些规范是由W3C（World Wide Web Consortium)组织维护的，该组织是Web的标准组织。
+> 浏览器解释和显示HTML文件的方式是在HTML和CSS规范中指定的。这些规范是由W3C（World Wide Web Consortium)组织维护的，该组织是Web的标准组织。
 
 The current version of HTML is 4 (<http://www.w3.org/TR/html401/>). Version 5 is in progress. The current CSS version is 2 (<http://www.w3.org/TR/CSS2/>) and version 3 is in progress. 
+
+> 当前HTML的版本是4(<http://www.w3.org/TR/html401/>)，第5版正在进行中。目前CSS版本是2(<http://www.w3.org/TR/CSS2/>) ，第3版正在进行中。
+
 For years browsers conformed to only a part of the specifications and developed their own extensions. That caused serious compatibility issues for web authors. Today most of the browsers more or less conform to the specifications.
 
-当前HTML的版本是4(<http://www.w3.org/TR/html401/>)，第5版正在进行中。目前CSS版本是2(<http://www.w3.org/TR/CSS2/>) ，第3版正在进行中。
-
-多年来，各家浏览器只遵循了部分规范，并各自开发这自己的扩展功能。这给Web作者造成了严重的兼容性问题。今天大多数浏览器都遵循了规范。
+> 多年来，各家浏览器只遵循了部分规范，并各自开发这自己的扩展功能。这给Web作者造成了严重的兼容性问题。今天大多数浏览器都遵循了规范。
 
 Browsers' user interface have a lot in common with each other. Among the common user interface elements are:
 
-浏览器用户界面彼此有很多共同之处，常见的用户元素如下：
+> 浏览器用户界面彼此有很多共同之处，常见的用户元素如下：
 
-- Address bar for inserting the URI 用于插入URI的地址栏
-- Back and forward buttons 前进后退按钮
-- Bookmarking options 书签选项
-- A refresh and stop buttons for refreshing and stopping the loading of current documents 用于刷新和停止加载当前文档的刷新和停止按钮。
+- Address bar for inserting the URI  用于插入URI的地址栏
+- Back and forward buttons  前进后退按钮
+- Bookmarking options  书签选项
+- A refresh and stop buttons for refreshing and stopping the loading of current documents  用于刷新和停止加载当前文档的刷新和停止按钮。
 - Home button that gets you to your home page  主页按钮，可以访问您的主页。
 
 Strangely enough, the browser's user interface is not specified in any formal specification, it is just good practices shaped over years of experience and by browsers imitating each other. The HTML5 specification doesn't define UI elements a browser must have, but lists some common elements. Among those are the address bar, status bar and tool bar. There are, of course, features unique to a specific browser like Firefox downloads manager. 
 
-奇怪的是，浏览器的用户界面并没有在任何规范中声明，这仅仅是多年实践经验和浏览器之间互相模仿的结果。HTML5规范没有定义浏览器必须有的UI元素，但是列出了一些常见的元素。其中包括地址栏，状态栏以及工具栏。当然还有像FireFox下载管理器这样的特定浏览器所特有的功能。
+> 奇怪的是，浏览器的用户界面并没有在任何规范中声明，这仅仅是多年实践经验和浏览器之间互相模仿的结果。HTML5规范没有定义浏览器必须有的UI元素，但是列出了一些常见的元素。其中包括地址栏，状态栏以及工具栏。当然还有像FireFox下载管理器这样的特定浏览器所特有的功能。
 
 More on that in the user interface chapter.
 
-更多内容会在用户界面的章节讲解。
+> 更多内容会在用户界面的章节讲解。
 
 ### The browser's high level structure 浏览器的高级结构
 
 The browser's main components are ([1.1](http://taligarsiel.com/Projects/howbrowserswork1.htm#1)):
 
-浏览器的主要组件有（[1.1](http://taligarsiel.com/Projects/howbrowserswork1.htm#1)）：
+> 浏览器的主要组件有（[1.1](http://taligarsiel.com/Projects/howbrowserswork1.htm#1)）：
 
-1. The user interface - this includes the address bar, back/forward button, bookmarking menu etc. Every part of the browser display except the main window where you see the requested page. 用户界面，即包括地址栏，前进/后退按钮，书签菜单等。除了您看到所请求的页面的主窗口之外，浏览器的每个部分都会显示。
-2. The browser engine - the interface for querying and manipulating the rendering engine.浏览器引擎，即用于查询和操纵渲染引擎的接口
-3. The rendering engine - responsible for displaying the requested content. For example if the requested content is HTML, it is responsible for parsing the HTML and CSS and displaying the parsed content on the screen. 渲染引擎，负责显示请求的内容。例如如果请求的内容是HTML，渲染引擎就负责解析HTML和CSS并将解析的内容显示在屏幕上。
-4. Networking - used for network calls, like HTTP requests. It has platform independent interface and underneath implementations for each platform.网络组件，用于执行网络调用，如HTTP请求。它具有独立于平台的接口和每个平台的底层实现。
-5. UI backend - used for drawing basic widgets like combo boxes and windows. It exposes a generic interface that is not platform specific. Underneath it uses the operating system user interface methods. UI后台，用于绘制类似于组合框和窗口这样的基本部件。它暴露出一些与平台无关的通用接口。在底层调用操作系统的用户界面方法。
-6. JavaScript interpreter. Used to parse and execute the JavaScript code. JavaScript解释器，用于解析和执行JavaScript代码。
-7. Data storage. This is a persistence layer. The browser needs to save all sorts of data on the hard disk, for examples, cookies. The new HTML specification (HTML5) defines 'web database' which is a complete (although light) database in the browser. 数据存储，这是一个持久层。浏览器需要将所有类型的数据保存到磁盘上，像cookie这种。新的HTML规范（HTML5)定义了 'web database' ，这是一个完善（而轻量）的浏览器数据库。
+1. The user interface - this includes the address bar, back/forward button, bookmarking menu etc. Every part of the browser display except the main window where you see the requested page. 
+
+   > 用户界面，即包括地址栏，前进/后退按钮，书签菜单等。除了您看到所请求的页面的主窗口之外，浏览器的每个部分都会显示。
+
+2. The browser engine - the interface for querying and manipulating the rendering engine.
+
+   > 浏览器引擎，即用于查询和操纵渲染引擎的接口
+
+3. The rendering engine - responsible for displaying the requested content. For example if the requested content is HTML, it is responsible for parsing the HTML and CSS and displaying the parsed content on the screen. 
+
+   > 渲染引擎，负责显示请求的内容。例如如果请求的内容是HTML，渲染引擎就负责解析HTML和CSS并将解析的内容显示在屏幕上。
+
+4. Networking - used for network calls, like HTTP requests. It has platform independent interface and underneath implementations for each platform.
+
+   > 网络组件，用于执行网络调用，如HTTP请求。它具有独立于平台的接口和每个平台的底层实现。
+
+5. UI backend - used for drawing basic widgets like combo boxes and windows. It exposes a generic interface that is not platform specific. Underneath it uses the operating system user interface methods. 
+
+   > UI后台，用于绘制类似于组合框和窗口这样的基本部件。它暴露出一些与平台无关的通用接口。在底层调用操作系统的用户界面方法。
+
+6. JavaScript interpreter. Used to parse and execute the JavaScript code.
+
+   >  JavaScript解释器，用于解析和执行JavaScript代码。
+
+7. Data storage. This is a persistence layer. The browser needs to save all sorts of data on the hard disk, for examples, cookies. The new HTML specification (HTML5) defines 'web database' which is a complete (although light) database in the browser. 
+
+   > 数据存储，这是一个持久层。浏览器需要将所有类型的数据保存到磁盘上，像cookie这种。新的HTML规范（HTML5)定义了 'web database' ，这是一个完善（而轻量）的浏览器数据库。
 
 ![Figure 1: Browser main components.](http://taligarsiel.com/Projects/layers.png "Figure 1: Browser main components. ")
 
 *Figure 1: Browser main components.* 图1:浏览器主要组件
 
-It is important to note that Chrome, unlike most browsers, holds multiple instances of the rendering engine - one for each tab,. Each tab is a separate process. 值得注意的是，Chrome与大多数浏览器不同，它会生成多个渲染引擎的实例，即一个标签页对应一个渲染引擎实例。每个标签也是一个单独的进程。
+It is important to note that Chrome, unlike most browsers, holds multiple instances of the rendering engine - one for each tab,. Each tab is a separate process. 
 
-I will devote a chapter for each of these components. 我将为每一个组件设置一个章节。
+> 值得注意的是，Chrome与大多数浏览器不同，它会生成多个渲染引擎的实例，即一个标签页对应一个渲染引擎实例。每个标签也是一个单独的进程。
+
+I will devote a chapter for each of these components. 
+
+> 我将为每一个组件设置一个章节。
 
 ### Communication between the components 组件之间的通信
 
 Both Firefox and Chrome developed a special communication infrastructures. 
+
+> FireFox和Chrome都各自开发了特殊的通信基础框架。
+
 They will be discussed in a special chapter.
 
-FireFox和Chrome都各自开发了特殊的通信基础框架。
-
-我们将在特定章节中讨论。
+> 我们将在特定章节中讨论。
 
 ## The rendering engine 渲染引擎
 
-The responsibility of the rendering engine is well... Rendering, that is display of the requested contents on the browser screen. 渲染引擎的职责就是。。。渲染，就是说将用户请求的内容显示到浏览器屏幕上。
+The responsibility of the rendering engine is well... Rendering, that is display of the requested contents on the browser screen.
 
-By default the rendering engine can display HTML and XML documents and images. It can display other types through a plug-in (a browser extension). An example is displaying PDF using a PDF viewer plug-in. We will talk about plug-ins and extensions in a special chapter. In this chapter we will focus on the main use case - displaying HTML and images that are formatted using CSS. 渲染引擎默认可以显示HTML和XML文档以及图片。它可以通过插件（浏览器插件）显示其他类型的资源。例如使用一个PDF阅读器插件在浏览器中显示PDF文档。我们将会在特定的章节谈到插件和扩展。这一章，我们重点介绍主要用例 -显示使用CSS格式化的HTML和图像。
+> 渲染引擎的职责就是。。。渲染，就是说将用户请求的内容显示到浏览器屏幕上。
+
+By default the rendering engine can display HTML and XML documents and images. It can display other types through a plug-in (a browser extension). An example is displaying PDF using a PDF viewer plug-in. We will talk about plug-ins and extensions in a special chapter. In this chapter we will focus on the main use case - displaying HTML and images that are formatted using CSS. 
+
+> 渲染引擎默认可以显示HTML和XML文档以及图片。它可以通过插件（浏览器插件）显示其他类型的资源。例如使用一个PDF阅读器插件在浏览器中显示PDF文档。我们将会在特定的章节谈到插件和扩展。这一章，我们重点介绍主要用例 -显示使用CSS格式化的HTML和图像。
 
 ### Rendering engines 渲染引擎
 
-Our reference browsers - Firefox, Chrome and Safari are built upon two rendering engines. Firefox uses Gecko - a "home made" Mozilla rendering engine. Both Safari and Chrome use Webkit. 我们参考的浏览器-FireFox，Chrome和Safari都是基于两个渲染引擎。FireFox使用的是Gecko-由Mozilla公司自研的渲染引擎。Safari和Chrome都是用的Webkit。
+Our reference browsers - Firefox, Chrome and Safari are built upon two rendering engines. Firefox uses Gecko - a "home made" Mozilla rendering engine. Both Safari and Chrome use Webkit. 
 
-Webkit is an open source rendering engine which started as an engine for the Linux platform and was modified by Apple to support  *Mac* and Windows. See <http://webkit.org/> for more details.Webkit十一个始于Linux平台的开源的渲染引擎，被Apple公司修改为支持Mac和Windows操作系统。
+>  我们参考的浏览器-FireFox，Chrome和Safari都是基于两个渲染引擎。FireFox使用的是Gecko-由Mozilla公司自研的渲染引擎。Safari和Chrome都是用的Webkit。
+
+Webkit is an open source rendering engine which started as an engine for the Linux platform and was modified by Apple to support  *Mac* and Windows. See <http://webkit.org/> for more details.
+
+> Webkit是一个始于Linux平台的开源的渲染引擎，被Apple公司修改为支持Mac和Windows操作系统。
 
 ### The main flow 主要工作流程
 
-The rendering engine will start getting the contents of the requested document from the networking layer. This will usually be done in 8K chunks. 渲染引擎将会从网络层接收用户请求到的文档的内容。通畅是按照8K大小的块进行的。
+The rendering engine will start getting the contents of the requested document from the networking layer. This will usually be done in 8K chunks. 
+
+> 渲染引擎将会从网络层接收用户请求到的文档的内容。通畅是按照8K大小的块进行的。
 
 After that this is the basic flow of the rendering engine: 之后渲染引擎的主要工作流程如下：
 
@@ -116,13 +154,21 @@ After that this is the basic flow of the rendering engine: 之后渲染引擎的
 
 *Figure 2:Rendering engine basic flow.* 图2: 渲染引擎主要工作流
 
-The rendering engine will start parsing the HTML document and turn the tags to [DOM](http://taligarsiel.com/Projects/howbrowserswork1.htm#DOM) nodes in a tree called the "content tree". It will parse the style data, both in external CSS files and in style elements. The styling information together with visual instructions in the HTML will be used to create another tree - the [render tree](http://taligarsiel.com/Projects/howbrowserswork1.htm#Render_tree_construction). 渲染引擎将会解析HTML文档，并将HTML中的标签转化成一个被叫做“content tree（内容树）”的树上的[DOM](http://taligarsiel.com/Projects/howbrowserswork1.htm#DOM)节点。它会解析样式数据，不管是来自外部CSS文件还是内部样式元素上的。所有的样式信息连同HTML中的可视化指令将被一起用于创建另一棵树-渲染树。
+The rendering engine will start parsing the HTML document and turn the tags to [DOM](http://taligarsiel.com/Projects/howbrowserswork1.htm#DOM) nodes in a tree called the "content tree". It will parse the style data, both in external CSS files and in style elements. The styling information together with visual instructions in the HTML will be used to create another tree - the [render tree](http://taligarsiel.com/Projects/howbrowserswork1.htm#Render_tree_construction). 
 
-The render tree contains rectangles with visual attributes like color and dimensions. The rectangles are in the right order to be displayed on the screen.渲染树包含了具有视觉属性（如颜色和尺寸）的矩形。这些矩形以正确的顺序排列，可以显示在屏幕上。
+> 渲染引擎将会解析HTML文档，并将HTML中的标签转化成一个被叫做“content tree（内容树）”的树上的[DOM](http://taligarsiel.com/Projects/howbrowserswork1.htm#DOM)节点。它会解析样式数据，不管是来自外部CSS文件还是内部样式元素上的。所有的样式信息连同HTML中的可视化指令将被一起用于创建另一棵树-渲染树。
 
-After the construction of the render tree it goes through a "[layout](http://taligarsiel.com/Projects/howbrowserswork1.htm#layout)" process. This means giving each node the exact coordinates where it should appear on the screen. The next stage is [painting](http://taligarsiel.com/Projects/painting) - the render tree will be traversed and each node will be painted using the UI backend layer. 在创建完渲染树以后渲染引擎要经历一个[布局](http://taligarsiel.com/Projects/howbrowserswork1.htm#DOM)的处理。这就意味着要给每个节点提供它们应该出现在屏幕上的确切座标。下一阶段是[绘制](http://taligarsiel.com/Projects/painting) - 渲染树将会被遍历，并使用UI后端 层绘制每一个节点。
+The render tree contains rectangles with visual attributes like color and dimensions. The rectangles are in the right order to be displayed on the screen.
 
-It's important to understand that this is a gradual process. For better user experience, the rendering engine will try to display contents on the screen as soon as possible. It will not wait until all HTML is parsed before starting to build and layout the render tree. Parts of the content will be parsed and displayed, while the process continues with the rest of the contents that keeps coming from the network.  理解这是一个渐进的过程很重要。为了更佳的用户体验，渲染引擎将会尝试尽快在屏幕上显示内容。它不会等到所有HTML被解析就会开始构建和布局渲染树。部分内容会被解析和显示，同时继续处理来自网络的剩余内容。
+> 渲染树包含了具有视觉属性（如颜色和尺寸）的矩形。这些矩形以正确的顺序排列，可以显示在屏幕上。
+
+After the construction of the render tree it goes through a "[layout](http://taligarsiel.com/Projects/howbrowserswork1.htm#layout)" process. This means giving each node the exact coordinates where it should appear on the screen. The next stage is [painting](http://taligarsiel.com/Projects/painting) - the render tree will be traversed and each node will be painted using the UI backend layer. 
+
+> 在创建完渲染树以后渲染引擎要经历一个[布局](http://taligarsiel.com/Projects/howbrowserswork1.htm#DOM)的处理。这就意味着要给每个节点提供它们应该出现在屏幕上的确切座标。下一阶段是[绘制](http://taligarsiel.com/Projects/painting) - 渲染树将会被遍历，并使用UI后端 层绘制每一个节点。
+
+It's important to understand that this is a gradual process. For better user experience, the rendering engine will try to display contents on the screen as soon as possible. It will not wait until all HTML is parsed before starting to build and layout the render tree. Parts of the content will be parsed and displayed, while the process continues with the rest of the contents that keeps coming from the network.  
+
+> 理解这是一个渐进的过程很重要。为了更佳的用户体验，渲染引擎将会尝试尽快在屏幕上显示内容。它不会等到所有HTML被解析就会开始构建和布局渲染树。部分内容会被解析和显示，同时继续处理来自网络的剩余内容。
 
 #### Main flow examples
 
@@ -135,7 +181,12 @@ It's important to understand that this is a gradual process. For better user exp
 *Figure 4: Mozilla's Gecko rendering engine main flow([3.6](http://taligarsiel.com/Projects/howbrowserswork1.htm#3_6))* 图4:Mozilla的Gecko渲染引擎的主要工作流
 
 From figures 3 and 4 you can see that although Webkit and Gecko use slightly different terminology, the flow is basically the same. 
+
+> 从 图3 和 图4 中你可以看到，尽管 WebKit 和 Gecko 使用的术语略有不同，但是流程大体相同。
+
 Gecko calls the tree of visually formatted elements - Frame tree. Each element is a frame. Webkit uses the term "Render Tree" and it consists of "Render Objects". Webkit uses the term "layout" for the placing of elements, while Gecko calls it "Reflow". "Attachment" is Webkit's term for connecting DOM nodes and visual information to create the render tree. A minor non semantic difference is that Gecko has an extra layer between the HTML and the DOM tree. It is called the "content sink" and is a factory for making DOM elements. We will talk about each part of the flow:
+
+> Gecko 将这个可视化格式的元素树称之为 - Frame tree（帧树）。每个元素都是一个frame（帧）。Webkit 用 "Render Tree" （渲染树）来称呼它，而且它包含的是 "Render Objects"（渲染对象）。Webkit 用 "layout" （布局）来放置元素，但是 Gecko 称之为 "Reflow"（渲染）。"Attachment" 是 Webkit 用于连接 DOM 节点与可视信息以创建渲染树的术语。一个小的非语义化差异是 Gecko 在 HTML 和 DOM 之间还有一个额外的层。被称作 "content sink"（内容接收器），是制造 DOM 元素的工厂。流程的各个部分我们都会谈到：
 
 ### Parsing - general
 
@@ -159,6 +210,7 @@ Syntax analysis is the applying of the language syntax rules.
 Parsers usually divide the work between two components - the **lexer**(sometimes called tokenizer) that is responsible for breaking the input into valid tokens, and the **parser** that is responsible for constructing the parse tree by analyzing the document structure according to the language syntax rules. The lexer knows how to strip irrelevant characters like white spaces and line breaks.
 
 ![img](http://taligarsiel.com/Projects/image011.png) 
+
 *Figure 6: from source document to parse trees*
 
 The parsing process is iterative. The parser will usually ask the lexer for a new token and try to match the token with one of the syntax rules. If a rule is matched, a node corresponding to the token will be added to the parse tree and the parser will ask for another token. 

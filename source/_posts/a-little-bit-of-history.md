@@ -2,6 +2,8 @@
 title: 浏览器的history
 date: 2018-09-25 13:24:33
 tags: [浏览器,history,web,翻译]
+categories: 
+- [前端]
 ---
 
 

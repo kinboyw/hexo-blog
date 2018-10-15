@@ -2,6 +2,8 @@
 title: Gitlab Docker容器中SSH端口失效问题
 date: 2018-08-06
 tags: [docker,gitlab,ssh]
+categories: 
+- [Linux]
 ---
 
 

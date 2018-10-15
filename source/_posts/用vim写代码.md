@@ -1,7 +1,11 @@
+
+
 ---
 title: 用vim写代码
 date: 2018-07-26 09:17:31
 tags: [工具,vim]
+categories: 
+- [Linux]
 ---
 
 

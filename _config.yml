@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: kinboy's note
+title: Kinboy's note
 subtitle: 前端漫记
-description: 前端工程师笔记
+description: FE | Linux 
 keywords: 前端
-author: kinboy
+author: 王进波
 language: 
 timezone:
 
@@ -81,3 +81,24 @@ deploy:
   type: git
   repo: git@github.com:kinboyw/kinboyw.github.io.git
   branch: master
+
+
+google_site_verification: AKuwh4i11uWg0wOl_cM7AI_dHqOHOLKYfCxKc8Lfv6E
+
+baidu_analytics: c9c2b9e915e6bb8ec323a2f98c0c98d8
+
+
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
+  
+  
+sitemap:
+  path: sitemap.xml
+  template: ./sitemap_template.xml

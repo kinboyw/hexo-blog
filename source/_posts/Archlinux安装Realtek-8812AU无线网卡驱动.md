@@ -2,6 +2,8 @@
 title: Archlinux安装Realtek-8812AU无线网卡驱动
 date: 2018-10-12 12:10:25
 tags: [linux,archlinux,驱动]
+categories: 
+- [Linux]
 ---
 
 
