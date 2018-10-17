@@ -2,6 +2,8 @@
 title: Nginx-Windows版开启支持TLSv1.2
 date: 2018-10-17 10:53:27
 tags: [Nginx,HTTPS]
+categories: 
+- [Nginx,HTTPS]
 ---
 
 
