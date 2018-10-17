@@ -1,16 +1,12 @@
-
-
 ---
 title: 用vim写代码
 date: 2018-07-26 09:17:31
 tags: [工具,vim]
 categories: 
-- [Linux]
+- [工具,Vim]
 ---
 
 
-
-# Using vim for writing code
 
 Vim is a great text editor which can be much more powerful then any GUI editor or IDE. It has its learning curve, but once you are used to it you’ll never want to switch to anything else. Here’s a quick tutorial on how to use and customize vim for working with code.
 

@@ -2,6 +2,8 @@
 title: NPM package.json 中的 tilde (~) 和 caret (^) 
 date: 2018-10-12 16:33:27
 tags: [npm,web,FE]
+categories:
+- [前端]
 ---
 
 
@@ -23,6 +25,8 @@ If you use npm to manage packages in your JavaScript application, you’re proba
 The syntax is in JSON format where the key is the name of the package and the value is the version of the package to be used.
 
 语法是 `JSON` 格式，key 是 package 的名称，value 是要使用的这个 package 的版本号。
+
+<!--more-->
 
 npm uses the package.json file to specify the version of a package that your app depends on.
 
