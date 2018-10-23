@@ -3,7 +3,7 @@ title: 'NGINX: Proxy folders to different root'
 date: 2018-10-17 17:40:17
 tags: [Nginx]
 categories: 
-- [Nginx]
+- [FE,NGINX]
 ---
 
 

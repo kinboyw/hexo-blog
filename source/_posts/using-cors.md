@@ -3,7 +3,8 @@ title: 使用 CORS （跨域资源共享）
 date: 2018-10-14 21:18:43
 tags: [CORS,web,跨域,FE]
 categories: 
-- [前端]
+- [翻译]
+- [FE,CORS]
 ---
 
 

@@ -12,8 +12,6 @@ categories:
 
 {%asset_img download.png%}
 
-<img src="download.png" width="400" height="300" alt="twitter capture" title="orignal expression">
-
 ​	这显然是个棘手的问题，可能大多数程序员会认为这个表达式会返回一个类似  `[1，2，3]` 的数组，如果你在浏览器中输入上面的表达式回车后，就会看到实际返回的是 `[1, NaN, NaN]` 。
 
 ​	解释如下，`parseInt` 作为 `JavaScript` 的内置函数，试图将一个字符串转换为数值，并返回该数值。所以，一个这样的调用：

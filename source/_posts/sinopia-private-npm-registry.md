@@ -3,8 +3,7 @@ title: 使用 Docker 搭建私有NPM仓库
 date: 2018-08-03
 tags: [npm,docker,sinopia]
 categories: 
-- [Npm]
-- [Docker]
+- [FE,工程化]
 ---
 
 

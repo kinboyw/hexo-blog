@@ -4,8 +4,6 @@ date: 2018-10-15 12:58:49
 tags: [Jenkins,CI,运维,架构]
 categories:
 - [架构]
-- [运维]
-- [Jenkins]
 ---
 
 

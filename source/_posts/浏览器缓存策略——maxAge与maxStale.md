@@ -3,7 +3,8 @@ title: 浏览器缓存策略交互——maxAge 与 maxStale
 date: 2018-08-18 19:45:42
 tags: [浏览器,缓存策略,缓存]
 categories: 
-- [前端]
+- [FE,Cache Policy]
+- [翻译]
 ---
 
 

@@ -3,7 +3,8 @@ title: 浏览器是如何工作的
 date: 2018-7-17 13:24:33
 tags: FE 
 categories: 
-- [前端]
+- [FE,Browser]
+- [翻译]
 ---
 
 
