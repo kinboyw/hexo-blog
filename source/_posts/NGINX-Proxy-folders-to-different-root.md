@@ -1,9 +1,10 @@
 ---
 title: 'NGINX: Proxy folders to different root'
 date: 2018-10-17 17:40:17
-tags: [Nginx]
+tags: [Nginx,翻译]
 categories: 
 - [FE,NGINX]
+- [翻译]
 ---
 
 

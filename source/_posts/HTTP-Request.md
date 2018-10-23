@@ -75,19 +75,15 @@ The Request-URI is a Uniform Resource Identifier (section [3.2](https://www.w3.o
 
 The four options for Request-URI are dependent on the nature of the request. The asterisk "*" means that the request does not apply to a particular resource, but to the server itself, and is only allowed when the method used does not necessarily apply to a resource. One example would be
 
-> Request-URI 的四个选项取决于请求的本质。星号 `”*“`  表示请求不是作用于某个特定资源，而是服务器本身，只有当使用的方法不一定作用于一个资源的时候才允许这样。下面是一个例子：
+> Request-URI 的四个选项取决于请求的性质。星号 `”*“`  表示请求不适用于特定资源，而是适用于服务器本身，并且仅在使用的方法不一定适用于资源的时候才允许。下面是一个例子：
 
 ```
        OPTIONS * HTTP/1.1
 ```
 
-The absoluteURI form is REQUIRED when the request is being made to a proxy. The proxy is requested to forward the request or service it from a valid cache, and return the response. Note that the proxy MAY forward the request on to another proxy or directly to the server
+The absoluteURI form is REQUIRED when the request is being made to a proxy. The proxy is requested to forward the request or service it from a valid cache, and return the response. Note that the proxy MAY forward the request on to another proxy or directly to the server specified by the absoluteURI. In order to avoid request loops, a proxy MUST be able to recognize all of its server names, including any aliases, local variations, and the numeric IP address. An example Request-Line would be:
 
-> 在向代理发出请求的时候，必须使用`absoluteURI（绝对URI）` 。代理会转发请求或者提供有效的缓存，然后返回响应。要知道代理可能转发请求给另一个代理或者直接转发给服务器。
-
-specified by the absoluteURI. In order to avoid request loops, a proxy MUST be able to recognize all of its server names, including any aliases, local variations, and the numeric IP address. An example Request-Line would be:
-
-> 由 `absoluteURI` 指定。为了避免请求循环，代理 `必须` 能够识别所有的服务器名称，包括任何别名，本地变体，以及 IP 地址。一个 `Request-URI` 的示例如下：
+> 在向代理发出请求的时候，必须使用`absoluteURI（绝对URI）` 。代理会转发请求或者提供有效的缓存，然后返回响应。要知道代理可能转发请求给另一个代理或者直接转发给服务器，由 `absoluteURI` 指定。为了避免请求循环，代理 `必须` 能够识别所有的服务器名称，包括任何别名，本地变体，以及 IP 地址。一个 `Request-URI` 的示例如下：
 
 ```
        GET http://www.w3.org/pub/WWW/TheProject.html HTTP/1.1
@@ -99,7 +95,7 @@ To allow for transition to absoluteURIs in all requests in future versions of HT
 
 The authority form is only used by the CONNECT method (section [9.9](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.9)).
 
-> 权限表仅由 `CONNECT` 方法使用  (section [9.9](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.9))。	#此处没有弄明白是什么意思，form的含义也不是很好理解，希望朋友一起探讨
+> 权限（authority）仅由 `CONNECT` 方法使用  (section [9.9](https://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9.9))。	
 
 The most common form of Request-URI is that used to identify a resource on an origin server or gateway. In this case the absolute path of the URI MUST be transmitted (see section [3.2.1](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.2.1), abs_path) as the Request-URI, and the network location of the URI (authority) MUST be transmitted in a Host header field. For example, a client wishing to retrieve the resource above directly from the origin server would create a TCP connection to port 80 of the host "www.w3.org" and send the lines:
 
