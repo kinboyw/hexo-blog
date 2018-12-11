@@ -1,7 +1,8 @@
 ---
 title: 迁移Jenkins作业到新的Jenkins服务器
 date: 2018-10-15 12:58:49
-tags: [Jenkins,CI,运维,架构]
+copyright: true
+tags: [Jenkins,CI]
 categories:
 - [架构]
 ---

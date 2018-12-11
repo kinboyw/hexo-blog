@@ -1,6 +1,7 @@
 ---
 title: ike-scan扫描ipsec vpn服务端ike加密算法
 date: 2018-07-11 21:15:05
+copyright: true
 tags: [vpn,ipsec,ike-scan]
 categories: 
 - [Linux]

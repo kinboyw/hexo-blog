@@ -1,6 +1,7 @@
 ---
 title: 'NGINX: Proxy folders to different root'
 date: 2018-10-17 17:40:17
+copyright: true
 tags: [Nginx,翻译]
 categories: 
 - [FE,NGINX]
@@ -15,7 +16,7 @@ categories:
 
 这篇教程教你在 Nginx 中将站点的不同目录设置成不同的反向代理站点的根目录。
 
-默认情况下，假设有一个设置了 `proxy_pass` 的 `location` 区块，这个 `location` 区块匹配的是一个目录，例如 `/wiki` ，访问这个目录将跳转到代理服务器：
+默认情况下，假设有一个设置了 `proxy_pass` 的 `location` 区块，这个 `location` 区块匹配的是一个目录，例如 `/nagios` ，访问这个目录将跳转到代理服务器：
 
 ```
 location /nagios/ {

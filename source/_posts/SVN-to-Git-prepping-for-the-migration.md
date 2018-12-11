@@ -1,7 +1,8 @@
 ---
 title: SVN 到 Git，迁移的准备工作
 date: 2018-7-22 13:24:33
-tags: [git,svn,source control,工作流]
+copyright: true
+tags: [git,svn]
 categories: 
 - [Git]
 ---

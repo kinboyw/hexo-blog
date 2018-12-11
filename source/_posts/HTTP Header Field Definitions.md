@@ -1,7 +1,8 @@
 ---
 title: Header Field Definitions
 date: 2018-07-02 17:25:21
-tags: [Http,HTTP Header,Protocol]
+copyright: true
+tags: [HTTP Header,Protocol]
 categories: 
 - [FE,HTTP]
 - [翻译]
@@ -16,9 +17,13 @@ RFC 2616 Fielding, et al.
 
 This section defines the syntax and semantics of all standard HTTP/1.1 header fields. For entity-header fields, both sender and recipient refer to either the client or the server, depending on who sends and who receives the entity.
 
+> 这部分定义了所有标准 HTTP/1.1 头部字段的语法和语义。对 实体头部字段，发送者和接收者指客户端或者服务器，取决于谁发送以及谁接收实体
+
 ### 14.1 Accept
 
 The Accept request-header field can be used to specify certain media types which are acceptable for the response. Accept headers can be used to indicate that the request is specifically limited to a small set of desired types, as in the case of a request for an in-line image.
+
+> Accept 请求头可以被用于指定可接收的请求响应中的媒体类型。Accept 头部可以用于指示请求只限于特定一小组所需的类型，例如在在请求一个内嵌图片的时候可以指定图片的格式等。
 
 ```http
        Accept         = "Accept" ":"
@@ -34,6 +39,8 @@ The Accept request-header field can be used to specify certain media types which
 <!--more-->
 
 The asterisk "*" character is used to group media types into ranges, with "*/*" indicating all media types and "type/*" indicating all subtypes of that type. The media-range MAY include media type parameters that are applicable to that range.
+
+>
 
 Each media-range MAY be followed by one or more accept-params, beginning with the "q" parameter for indicating a relative quality factor. The first "q" parameter (if any) separates the media-range parameter(s) from the accept-params. Quality factors allow the user or user agent to indicate the relative degree of preference for that media-range, using the qvalue scale from 0 to 1 (section [3.9](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.9)). The default value is q=1.
 

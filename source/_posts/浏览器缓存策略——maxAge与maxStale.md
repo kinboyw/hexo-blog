@@ -1,13 +1,12 @@
 ---
 title: 浏览器缓存策略交互——maxAge 与 maxStale
 date: 2018-08-18 19:45:42
-tags: [浏览器,缓存策略,缓存]
+copyright: true
+tags: [浏览器,缓存策略]
 categories: 
 - [FE,Cache Policy]
 - [翻译]
 ---
-
-
 
 原文：[Cache Policy Interaction—Maximum Age and Maximum Staleness](https://docs.microsoft.com/en-us/dotnet/framework/network-programming/cache-policy-interaction-maximum-age-and-maximum-staleness)
 

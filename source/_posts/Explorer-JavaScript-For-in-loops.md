@@ -1,7 +1,8 @@
 ---
 title: 探索 JavaScript For-in 循环
 date: 2018-7-14 19:23:42
-tags: [FE,javascript]
+copyright: true
+tags: [javascript]
 categories: 
 - [FE]
 - [翻译]

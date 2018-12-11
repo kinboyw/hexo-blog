@@ -1,7 +1,8 @@
 ---
 title: NPM package.json 中的 tilde (~) 和 caret (^) 
 date: 2018-10-12 16:33:27
-tags: [npm,web,FE]
+copyright: true
+tags: [npm]
 categories: 
 - [FE,工程化]
 ---

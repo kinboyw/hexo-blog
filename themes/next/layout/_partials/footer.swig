@@ -5,20 +5,11 @@
   <span class="with-love">
     <i class="fa fa-{{ theme.footer.icon }}"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span>
-
-  {% if theme.post_wordcount.totalcount %}
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item-icon">
-      <i class="fa fa-area-chart"></i>
-    </span>
-    {% if theme.post_wordcount.item_text %}
-      <span class="post-meta-item-text">{{ __('post.totalcount') }}&#58;</span>
-    {% endif %}
-    <span title="{{ __('post.totalcount') }}">{#
-    #}{{ totalcount(site, '0,0.0a') }}{#
-  #}</span>
-  {% endif %}
+  <span class="author" itemprop="copyrightHolder">{{ theme.footer.copyright || config.author }}</span><br/>
+  <img src="/images/beian.png" />
+  <span style="width:300px;margin:0 auto; padding:20px 0;">
+		 		<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=42011102002861" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">鄂公网安备 42011102002861号</p></a>
+		 	</span>
 </div>
 
 {% if theme.footer.powered %}

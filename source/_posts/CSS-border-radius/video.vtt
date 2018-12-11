@@ -1,0 +1,1483 @@
+﻿WEBVTT
+
+1
+00:00:02.630 --> 00:00:06.649
+在座的各位大家好，感谢到场
+
+2
+00:00:06.649 --> 00:00:10.009
+正如 Simon 介绍的，我是 Lea
+
+3
+00:00:10.009 --> 00:00:12.900
+这就是 border-radius 先生（戏称）
+
+4
+00:00:12.900 --> 00:00:15.660
+他看起来简单得就像是一个
+
+5
+00:00:15.660 --> 00:00:17.250
+出自小儿书里面的符号一样
+
+6
+00:00:17.250 --> 00:00:19.349
+因为许多，甚至每一位程序员
+
+7
+00:00:19.349 --> 00:00:20.840
+都不认为 border-radius 很酷
+
+8
+00:00:20.840 --> 00:00:23.789
+然而，今天我要这里证明，你们错了
+
+9
+00:00:23.789 --> 00:00:25.740
+border-radius 不仅现在很酷
+
+10
+00:00:25.740 --> 00:00:28.070
+并且在将来
+
+11
+00:00:28.070 --> 00:00:30.000
+《Background and Borders Level 4》发表 以后
+
+12
+00:00:30.000 --> 00:00:32.340
+他也会变得难以置信的酷
+
+13
+00:00:32.340 --> 00:00:33.990
+前提是这些技术能在浏览器中实现
+
+14
+00:00:33.990 --> 00:00:38.910
+所以大多数人
+
+15
+00:00:38.910 --> 00:00:40.530
+认为 border-radius 不酷
+
+16
+00:00:40.530 --> 00:00:41.820
+是因为他们只看到了冰山一角
+
+17
+00:00:41.820 --> 00:00:43.500
+这看起来就像你设置了一个值
+
+18
+00:00:43.500 --> 00:00:45.240
+然后得到了一些圆角
+
+19
+00:00:45.240 --> 00:00:47.310
+你设置的值越大
+
+20
+00:00:47.310 --> 00:00:50.490
+得到的圆角越大
+
+21
+00:00:50.490 --> 00:00:52.290
+这个值只是设置了
+
+22
+00:00:52.290 --> 00:00:55.440
+每个角上圆弧的半径
+
+23
+00:00:55.440 --> 00:00:57.750
+很多人都知道我们可以
+
+24
+00:00:57.750 --> 00:01:00.410
+为每一个角设置不同的值
+
+25
+00:01:00.410 --> 00:01:04.320
+例如通过设置 2 个值或者 3 个值
+
+26
+00:01:04.320 --> 00:01:06.719
+甚至 4 个值
+
+27
+00:01:06.719 --> 00:01:09.869
+他们沿着顺时针方向，从左上角开始
+
+28
+00:01:09.869 --> 00:01:12.960
+然而这些都很简单对吧
+
+29
+00:01:12.960 --> 00:01:16.170
+现在有个例子
+
+30
+00:01:16.170 --> 00:01:18.090
+它看起来就像一个普通的border-radius，
+
+31
+00:01:18.090 --> 00:01:21.749
+我们有 900 个像素
+
+32
+00:01:21.749 --> 00:01:23.520
+左上角的半径长度为 900 像素
+
+33
+00:01:23.520 --> 00:01:25.890
+其他的角半径长度都是 90 像素
+
+34
+00:01:25.890 --> 00:01:27.840
+这意味着，为了遵循这个设置
+
+35
+00:01:27.840 --> 00:01:30.329
+我们总共需要 990 像素
+
+36
+00:01:30.329 --> 00:01:34.729
+但是水平方向上我们只有 540 像素
+
+37
+00:01:34.729 --> 00:01:37.140
+420 vertically so where's all these
+垂直方向只有 420 像素，所以
+
+38
+00:01:37.140 --> 00:01:38.600
+这些半径要如何适应呢
+
+39
+00:01:38.600 --> 00:01:41.429
+所以浏览器通常不得不做一些调整，
+
+40
+00:01:41.429 --> 00:01:43.590
+因为他们显然不能遵循这个设定，
+
+41
+00:01:43.590 --> 00:01:47.729
+所以当 border-radius 不合适时
+
+42
+00:01:47.729 --> 00:01:49.619
+浏览器做这种调整
+
+43
+00:01:49.619 --> 00:01:51.719
+浏览器做这种调整
+
+44
+00:01:51.719 --> 00:01:53.369
+是为了尝试维持不同半径之间的比率。
+
+45
+00:01:53.369 --> 00:01:56.219
+所以在这种情况下
+
+46
+00:01:56.219 --> 00:01:58.759
+即使左上角的半径不是 900
+
+47
+00:01:58.759 --> 00:02:04.530
+它实际上是 308 和 81
+
+48
+00:02:04.530 --> 00:02:06.749
+仍然是右上角的 10 倍大小
+
+49
+00:02:06.749 --> 00:02:09.569
+右上角是 38 像素
+
+50
+00:02:09.569 --> 00:02:14.069
+在规范中有这么一段话，
+
+51
+00:02:14.069 --> 00:02:15.689
+当相邻的两个 border-radius 之和
+
+52
+00:02:15.689 --> 00:02:17.459
+超出了 border box 的尺寸，
+
+53
+00:02:17.459 --> 00:02:18.989
+用户代理（浏览器）必须适当减少所有的 border-radius 的值
+
+54
+00:02:18.989 --> 00:02:20.700
+用户代理（浏览器）必须适当减少所有的 border-radius 的值，
+
+55
+00:02:20.700 --> 00:02:22.920
+直到他们不再出现重叠，这段话的意思是
+
+56
+00:02:22.920 --> 00:02:25.319
+如果 border-radius 不合适
+
+57
+00:02:25.319 --> 00:02:27.569
+你只需要适当缩小他们，
+
+58
+00:02:27.569 --> 00:02:31.049
+这就是为什么我们可以声明一个很大的值来制作圆环，
+
+59
+00:02:31.049 --> 00:02:33.390
+并且不论这个值有多大。
+
+60
+00:02:33.390 --> 00:02:39.150
+例如，不论这个值 是 900 还是别的任何值
+
+61
+00:02:39.150 --> 00:02:40.859
+例如，不论这个值 是 900 还是别的任何值
+
+62
+00:02:40.859 --> 00:02:42.780
+it still stays a circle because it's
+它永远保持圆形，
+
+63
+00:02:42.780 --> 00:02:47.069
+scaled down and here's a cool demo which
+因为它被缩小了，这里有一个很酷的 demo
+
+64
+00:02:47.069 --> 00:02:49.319
+shows the number of different radii we
+展示了不同数值的半径
+
+65
+00:02:49.319 --> 00:02:52.139
+can make of different shapes we can make
+我们可以设置成不同的形状
+
+66
+00:02:52.139 --> 00:02:56.090
+just with what I've shown so far however
+就像我演示的一样，
+
+67
+00:02:56.090 --> 00:02:58.950
+the the border radius rabbit hole goes
+然而 border-radius 半径的坑比这还要深，
+
+68
+00:02:58.950 --> 00:03:01.590
+deeper than that so here we wanted to
+然而 border-radius 半径的坑比这还要深，
+
+69
+00:03:01.590 --> 00:03:04.680
+make an ellipse but an ellipse is not
+我们想要制作一个椭圆 ，
+
+70
+00:03:04.680 --> 00:03:06.959
+possible to make through parts of a
+但是一个椭圆不可能用我刚刚演示的这些圆环的部分来构成的
+
+71
+00:03:06.959 --> 00:03:08.549
+circle which is what I've showed so I've
+但是一个椭圆不可能用我刚刚演示的这些圆环的部分来构成的
+
+72
+00:03:08.549 --> 00:03:11.519
+shown so far however if we use a slash
+然而，如果我们用一个斜杠
+
+73
+00:03:11.519 --> 00:03:14.099
+we can specify different horizontal and
+我们就可以指定不同的水平和垂直的半径
+
+74
+00:03:14.099 --> 00:03:16.049
+vertical radii so effectively we can
+所以我们可以
+
+75
+00:03:16.049 --> 00:03:17.669
+make shapes out of parts of ellipses
+高效地制做出椭圆的组成部分
+
+76
+00:03:17.669 --> 00:03:20.010
+instead of parts of circles so if we
+而不是圆环的组成部分，
+
+77
+00:03:20.010 --> 00:03:23.549
+make this value bigger you can see how
+所以如果我们将这个值设置地更大，你就能看到
+
+78
+00:03:23.549 --> 00:03:28.840
+it works
+它是如何工作的
+
+79
+00:03:28.840 --> 00:03:33.170
+and if it's exactly the same as half of
+如果它刚好是我们宽度的一半，
+
+80
+00:03:33.170 --> 00:03:35.209
+our width and the vertical one is half
+并且垂直的值是高度的一半，
+
+81
+00:03:35.209 --> 00:03:38.629
+of our quiet we have an ellipse so the
+我们就可以得到一个椭圆，
+
+82
+00:03:38.629 --> 00:03:40.670
+next logical question is can we make
+所以下面的逻辑问题是，我们能够制作半个椭圆吗？
+
+83
+00:03:40.670 --> 00:03:47.120
+half an ellipse so the problem with this
+所以这个椭圆的问题就是
+
+84
+00:03:47.120 --> 00:03:48.920
+ellipse is that it's not very flexible
+它不是很灵活
+
+85
+00:03:48.920 --> 00:03:51.890
+if we increase the width you can see
+如果我们增加宽度，你就能看到
+
+86
+00:03:51.890 --> 00:03:53.150
+that it's not an ellipse anymore it's a
+它不再是一个椭圆了
+
+87
+00:03:53.150 --> 00:03:57.200
+weird sort of cylindrical shape and of
+这是一个很奇怪的圆柱形了
+
+88
+00:03:57.200 --> 00:03:59.269
+course we can change this to reflect the
+当然，我们可以改变这个来改变新的宽度
+
+89
+00:03:59.269 --> 00:04:01.129
+new width and it's an ellipse again but
+它又是一个椭圆了，
+
+90
+00:04:01.129 --> 00:04:03.260
+it's not very portable is it
+但是这不是很方便不对吧
+
+91
+00:04:03.260 --> 00:04:05.599
+however border-radius also accepts
+然而， border-radius 也可以接受百分数，
+
+92
+00:04:05.599 --> 00:04:10.519
+percentages and percentages are resolved
+百分数的解析是基于对应的方向的
+
+93
+00:04:10.519 --> 00:04:12.079
+to pay based on the corresponding
+百分数的解析是基于对应的方向的
+
+94
+00:04:12.079 --> 00:04:14.090
+dimension horizontally they're based on
+水平方向是基于宽度
+
+
+95
+00:04:14.090 --> 00:04:15.379
+the width and vertically based on the
+垂直方向是基于高度
+
+96
+00:04:15.379 --> 00:04:16.820
+height and since they're the same number
+因为在斜线的前后是相同的数字，
+
+97
+00:04:16.820 --> 00:04:18.739
+before and after the slash we don't even
+我们甚至可以不需要使用斜线了，
+
+98
+00:04:18.739 --> 00:04:21.560
+need the slash anymore so now I can just
+现在我可以直接改变两个方向的值，
+
+99
+00:04:21.560 --> 00:04:23.060
+change the dimensions and it just
+然后它就会自然地起作用了。
+
+100
+00:04:23.060 --> 00:04:26.660
+naturally works so half an ellipse would
+自然地起作用了。所以一个半椭圆
+
+101
+00:04:26.660 --> 00:04:29.539
+be because it's symmetric because this
+因为它是对称的，
+
+102
+00:04:29.539 --> 00:04:31.520
+half ellipse is symmetrical horizontally
+因为这个半椭圆是水平对称的
+
+103
+00:04:31.520 --> 00:04:34.160
+it's just 50% and then we have a really
+它就是是50%。然后我们在上面的拐角这里
+
+104
+00:04:34.160 --> 00:04:37.220
+large radii for the top corners in fact
+有很大的半径，事实上是100%
+
+105
+00:04:37.220 --> 00:04:40.340
+100% and zero for the bottom ones and
+底部的拐角半径是 0 
+
+106
+00:04:40.340 --> 00:04:42.289
+there you have half of reef very
+然后你就得到了半个鹅卵石一样
+
+107
+00:04:42.289 --> 00:04:46.910
+flexible ellipse so the next question is
+非常柔软的椭圆。所以接下来的问题是
+
+108
+00:04:46.910 --> 00:04:50.539
+can we make a quarter ellipse a quarter
+我们可以作出一个 1/4 的椭圆吗？
+
+109
+00:04:50.539 --> 00:04:52.010
+ellipse just has a hundred percent
+一个 1/4 椭圆在拐角处
+
+110
+00:04:52.010 --> 00:04:54.860
+radius in the corner in the part where
+有 100% 的半径，在这个部分，
+
+111
+00:04:54.860 --> 00:04:57.080
+in the corner it's rounded in this case
+在这个例子中，
+
+112
+00:04:57.080 --> 00:04:59.810
+the top right corner so if we specify a
+它在一个右上方的拐角出处变圆
+
+113
+00:04:59.810 --> 00:05:03.560
+hundred percent horizontally a hundred
+所以如果我们指定一个水平的 100% 
+
+114
+00:05:03.560 --> 00:05:05.720
+percent for the top right left corner
+右上角也指定一个 100%
+
+115
+00:05:05.720 --> 00:05:08.090
+and zero for the other corners for both
+在其他拐角处，同时设置水平和垂直半径为 0 
+
+116
+00:05:08.090 --> 00:05:11.830
+horizontal and vertical radii radiuses
+在其他拐角处，同时设置水平和垂直半径为 0 
+
+117
+00:05:11.830 --> 00:05:15.560
+there we have a quarter ellipse it
+这样，我们就有一个 1/4 椭圆了
+
+118
+00:05:15.560 --> 00:05:17.330
+doesn't matter what dimensions we have
+不论我们改变什么方向
+
+119
+00:05:17.330 --> 00:05:18.979
+it's still it's still flexible and we
+它都很灵活
+
+120
+00:05:18.979 --> 00:05:21.650
+don't even need both parts because
+我们甚至不用同时使用这两部分
+
+121
+00:05:21.650 --> 00:05:23.300
+they're the same so we don't even need
+因为他们是相等的，所以我们甚至不需要
+
+122
+00:05:23.300 --> 00:05:26.150
+the slash so the next question is can we
+这个斜线。所以接下来的问题是
+
+123
+00:05:26.150 --> 00:05:29.539
+make a quarter ellipse now sorry we
+我们可以制作一个 1/4 椭圆吗？抱歉，我们不能
+
+124
+00:05:29.539 --> 00:05:32.240
+can't not with border-radius at least
+最终不是用 border-radius 实现的
+
+125
+00:05:32.240 --> 00:05:36.370
+you can still use SVG
+但你还是可以用 SVG （来实现）
+
+126
+00:05:36.370 --> 00:05:38.779
+but here are a few more shapes you can
+还有一些其他形状，
+
+127
+00:05:38.779 --> 00:05:41.029
+make with water radius and these are
+你可以用 border-radius 做出来，
+
+128
+00:05:41.029 --> 00:05:42.529
+just a few examples I came up with last
+这只是昨天晚上我想出来的一小部分
+
+129
+00:05:42.529 --> 00:05:44.749
+night there are many many more you can
+还有很多其他的你可以用 border-radius 实现。
+
+130
+00:05:44.749 --> 00:05:48.710
+use water radius for this demo is a
+还有很多其他的你可以用 border-radius 实现。
+
+131
+00:05:48.710 --> 00:05:50.300
+little old but I like it because it
+这些 demo 有点旧了，但是我喜欢它们，
+
+132
+00:05:50.300 --> 00:05:54.349
+shows how similar I used regular curves
+因为它展示显示了我是如何用类似的方式，
+
+133
+00:05:54.349 --> 00:05:56.979
+and different border-radius uses to make
+通过常规曲线和不同的 border-radius 设置来制作按钮
+
+134
+00:05:56.979 --> 00:05:59.990
+buttons actually look good and I've used
+事实上看起来还不错，
+
+135
+00:05:59.990 --> 00:06:01.610
+to regular curves and border-radius to
+而且我已经用过常规曲线和 border-radius 
+
+136
+00:06:01.610 --> 00:06:03.800
+make the to make pebbles that look more
+来制作一些鹅卵石，看起来非常自然
+
+137
+00:06:03.800 --> 00:06:07.849
+natural in all sorts of things and you
+来制作一些鹅卵石，看起来非常自然
+
+138
+00:06:07.849 --> 00:06:09.169
+might be wondering why should we go
+你可能好奇为什么我们要了解这些知识，而不直接用图片
+
+139
+00:06:09.169 --> 00:06:12.860
+through this and not just use images the
+你可能好奇为什么我们要了解这些知识，而不直接用图片
+
+140
+00:06:12.860 --> 00:06:14.419
+cool thing about border-radius is that
+border-radius 的一件很酷的事情就是
+
+141
+00:06:14.419 --> 00:06:16.849
+it's also animatable so we can use
+它是可以用来制作动画的，
+
+142
+00:06:16.849 --> 00:06:19.279
+transitions and animations on it so here
+所以我们可以在它上面使用 transitions 和  animations ，
+
+143
+00:06:19.279 --> 00:06:21.860
+when when I hover over it it switches
+所以当我悬停在它上面的时候，
+
+144
+00:06:21.860 --> 00:06:24.020
+from this radius which is if you
+它就从这个半径变化了，
+
+145
+00:06:24.020 --> 00:06:26.270
+remember used to create half ellipse to
+如果你还记得用过这个来创造一个半椭圆
+
+146
+00:06:26.270 --> 00:06:29.330
+50% and you can animate between any two
+改成 50% ，然后你可以在任意两个半径之间创作动画
+
+147
+00:06:29.330 --> 00:06:33.669
+radii I can even convert this into an
+我甚至可以将这个转换成一个动画，
+
+148
+00:06:33.669 --> 00:06:43.209
+animation and have it ran continuously
+让它一直动
+
+149
+00:06:43.209 --> 00:06:45.649
+without even me having to hover over it
+甚至不需要我在它上面悬停
+
+150
+00:06:45.649 --> 00:06:50.270
+and we can even add a bottom offset make
+我们甚至可以添加一个底部的偏移，
+
+151
+00:06:50.270 --> 00:06:52.849
+it look like it's jumping which i think
+来让他看起来是在跳动，
+
+152
+00:06:52.849 --> 00:06:54.949
+is kind of cool you can make all sorts
+我认为这很酷，你可以用 border-radius 
+
+153
+00:06:54.949 --> 00:06:56.060
+of different animations with
+做出各种各样的动画效果
+
+154
+00:06:56.060 --> 00:06:56.689
+border-radius
+做出各种各样的动画效果
+
+155
+00:06:56.689 --> 00:06:58.639
+and there's a lot of untapped potential
+还有很多尚未开发的潜力
+
+156
+00:06:58.639 --> 00:06:59.839
+there because most people don't even
+因为大多数人甚至不会
+
+157
+00:06:59.839 --> 00:07:03.740
+think to animate border-radius however
+想到 border-radius 动画，
+
+158
+00:07:03.740 --> 00:07:07.039
+at some point you reach a point where
+然而在一些情况下，你可能会遇到
+
+159
+00:07:07.039 --> 00:07:09.709
+you need to add content in your dev that
+你需要在 div 中添加文字内容
+
+160
+00:07:09.709 --> 00:07:11.839
+you've been using all this all these
+就可以使用所有这些（技巧）
+
+161
+00:07:11.839 --> 00:07:14.389
+cool boarder radii on it and as you can
+很酷的 border-radius，
+
+162
+00:07:14.389 --> 00:07:17.419
+see the situation is not great text
+如你所见，情况并不妙
+
+163
+00:07:17.419 --> 00:07:19.809
+wrapping doesn't follow border-radius in
+在小半径的情况下
+164
+00:07:19.809 --> 00:07:23.599
+in smaller radii you can sort of use
+文字并没有跟随 border-radius，
+
+165
+00:07:23.599 --> 00:07:27.439
+padding to help with that and the bigger
+你可以用一点点 padding 来帮下忙，
+
+166
+00:07:27.439 --> 00:07:28.879
+the radio is the bigger the padding but
+而且半径越大，padding 就要越大，
+
+167
+00:07:28.879 --> 00:07:30.559
+that also reduces the space you have for
+但是这也减少了文字能使用的空间
+
+168
+00:07:30.559 --> 00:07:33.969
+the text so unfortunately right now
+不幸的是，
+
+169
+00:07:33.969 --> 00:07:37.069
+there's no solution for this but in the
+目前这个情况还没有解决办法，
+
+170
+00:07:37.069 --> 00:07:41.330
+future we will have something a property
+但是在将来，我们将会有一些东西，
+
+171
+00:07:41.330 --> 00:07:44.180
+that's called shape inside
+一个叫作 shape inside 的属性
+
+172
+00:07:44.180 --> 00:07:47.690
+and if we specify content box it just
+如果我们指定了 content box，
+
+173
+00:07:47.690 --> 00:07:49.400
+naturally follows the content box
+文字就会自然地遵循 content box 的拐角
+
+174
+00:07:49.400 --> 00:07:51.050
+rounding it's actually a little buggy in
+这实际上是目前 Chrome 中的一个小小的 bug，
+
+175
+00:07:51.050 --> 00:07:52.430
+chrome right now because the Chrome has
+因为 Chrome 有一个试验性的实现，
+
+176
+00:07:52.430 --> 00:07:54.320
+an experimental implementation but it's
+因为 Chrome 有一个试验性的实现，
+
+177
+00:07:54.320 --> 00:07:55.669
+a bit buggy as you can see because it
+但这是一个小 bug，如你所见，
+
+178
+00:07:55.669 --> 00:07:57.949
+doesn't subtract padding from the
+因为它没有像它应该的那样
+
+179
+00:07:57.949 --> 00:08:02.780
+rounding like it should this will be in
+从拐角减去 padding，
+
+180
+00:08:02.780 --> 00:08:05.120
+CSS shapes level - it wasn't level one
+这将出现在 CSS Shape Level 2 中，而不是 Level 1
+
+181
+00:08:05.120 --> 00:08:08.840
+but it got deferred unfortunately and it
+但是不幸的是它被延期了（当前是2014年）
+
+182
+00:08:08.840 --> 00:08:10.160
+will be really cool because there's no
+那将会是真正的酷 ，
+
+183
+00:08:10.160 --> 00:08:12.550
+other solution to this right now
+因为目前还找不到其他的解决方案
+
+184
+00:08:12.550 --> 00:08:15.199
+at some point you might need to use
+有一些情况下你可能需要用到
+
+185
+00:08:15.199 --> 00:08:17.150
+JavaScript to read back values of world
+JavaScript 来读取 border-radius 的值
+
+186
+00:08:17.150 --> 00:08:18.949
+radius and you would expect since border
+你可能会期待，因为 border-radius
+
+187
+00:08:18.949 --> 00:08:23.300
+radius is rather old property you would
+是一个很老的属性了，
+
+188
+00:08:23.300 --> 00:08:25.780
+expect browsers to be relatively
+你可能希望浏览器能相对地
+
+189
+00:08:25.780 --> 00:08:29.510
+compatible with each other right I'm
+彼此适应对吧？ 抱歉
+
+190
+00:08:29.510 --> 00:08:32.630
+sorry that's not quite the case so soon
+情况并非如此
+
+191
+00:08:32.630 --> 00:08:35.150
+we are running some simple JavaScript to
+我们立刻就能运行一些简单的 JavaScript 来
+
+192
+00:08:35.150 --> 00:08:37.010
+get a reference to the element and then
+得到元素的引用 ，
+
+193
+00:08:37.010 --> 00:08:39.500
+read back the computed style in this
+然后读取计算的样式值，在这个例子中
+
+194
+00:08:39.500 --> 00:08:43.430
+case for border top left is so if you
+就是 “borderTopLeftRadius”，
+
+195
+00:08:43.430 --> 00:08:45.650
+look at the code here border top left is
+如果你看看这里的代码，左上边是 100%
+
+196
+00:08:45.650 --> 00:08:47.480
+a hundred percent which will get
+这将会被解析成 540 的水平像素
+
+197
+00:08:47.480 --> 00:08:51.279
+resolved to 540 pixels horizontally and
+这将会被解析成 540 的水平像素和 420 的垂直像素，
+
+198
+00:08:51.279 --> 00:08:55.279
+420 pixels however because horizontally
+因为水平方向上
+
+199
+00:08:55.279 --> 00:08:58.279
+we have to fit in a hundred 100 percent
+我们必须适应 100% 加上 2 em，
+
+200
+00:08:58.279 --> 00:09:01.160
+plus two M's and vertically we have to
+垂直方向上我们必须
+
+201
+00:09:01.160 --> 00:09:04.400
+fit in 100% plus 40 pixels sorry plus 50
+适应 100% 加上 40 像素，抱歉，加上 50%
+
+202
+00:09:04.400 --> 00:09:06.830
+percent the hundred percent needs to be
+100% 需要被缩小
+
+203
+00:09:06.830 --> 00:09:07.580
+scaled down
+100% 需要被缩小
+
+204
+00:09:07.580 --> 00:09:09.380
+so the actual used values will not be
+所以实际上使用的值将不是水平 540 像素，
+
+205
+00:09:09.380 --> 00:09:12.560
+540 pixels horizontally or 420
+也不是垂直 420 像素
+
+206
+00:09:12.560 --> 00:09:15.860
+vertically there will be smaller so what
+将会更小，所以浏览器将会反馈什么？
+
+207
+00:09:15.860 --> 00:09:17.570
+will browsers report back will they
+将会更小，所以浏览器将会反馈什么？
+
+208
+00:09:17.570 --> 00:09:18.950
+report back a hundred percent that we
+它会反馈一个我们指定的 100% 吗？
+
+209
+00:09:18.950 --> 00:09:20.870
+specified will they report back the
+会反馈一个我们指定的未经缩小的宽度和高度的值吗？
+
+210
+00:09:20.870 --> 00:09:23.000
+width and height values without scaling
+会反馈一个我们指定的未经缩小的宽度和高度的值吗？
+
+211
+00:09:23.000 --> 00:09:24.800
+them down or will they report back the
+或者会反馈这个实际上使用的值吗？
+
+212
+00:09:24.800 --> 00:09:29.480
+actual used values so what they do is
+浏览器做的是
+
+213
+00:09:29.480 --> 00:09:33.070
+that they actually disagree in that so
+各种浏览器实际在这一点上不一致
+
+214
+00:09:33.070 --> 00:09:36.380
+most browsers will return a hundred
+大多数浏览器将会返回一个 100%
+
+215
+00:09:36.380 --> 00:09:38.380
+percent which is the value we specified
+这是我们指定的
+
+216
+00:09:38.380 --> 00:09:41.450
+Firefox will return the actual used
+Firefox 将会返回实际使用的值
+
+217
+00:09:41.450 --> 00:09:44.360
+values which is very useful but
+这是非常有用的，
+
+218
+00:09:44.360 --> 00:09:46.070
+different from what any of the other
+但是和其他浏览器的行为都不一样
+
+219
+00:09:46.070 --> 00:09:48.920
+browsers do I'm hoping that the other
+我希望其他的浏览器
+
+220
+00:09:48.920 --> 00:09:50.720
+browsers will change to do what Firefox
+将来能够变成 Firefox 这样
+
+221
+00:09:50.720 --> 00:09:52.730
+does but it will probably be the other
+但是也可能是另一种方式
+
+222
+00:09:52.730 --> 00:09:53.780
+way around
+
+223
+00:09:53.780 --> 00:09:55.280
+and this is why I'm using Firefox for
+这就是为什么我用 Firefox 来讲这个主题
+
+224
+00:09:55.280 --> 00:09:56.870
+this talk actually because the values
+实际上是因为它返回的值
+
+225
+00:09:56.870 --> 00:09:59.020
+that returns are much more useful
+要有用的多
+
+226
+00:09:59.020 --> 00:10:01.610
+similarly if we try to read back the top
+类似的，如果我们尝试读取右上角的半径
+
+227
+00:10:01.610 --> 00:10:05.360
+right radius this one which is two amps
+这个 2em 的值
+
+228
+00:10:05.360 --> 00:10:09.290
+what will the browser's return to us two
+浏览器会返回什么给我们
+
+229
+00:10:09.290 --> 00:10:11.660
+M's converted to pixels two M's
+2em 转换成像素？
+
+230
+00:10:11.660 --> 00:10:14.930
+converted to pixels and scaled down so
+2em转换成像素，然后缩小？
+
+231
+00:10:14.930 --> 00:10:17.390
+most browsers will just convert the MS
+所以大多数浏览器会只将 2em 转换成像素
+
+232
+00:10:17.390 --> 00:10:19.820
+to pixels and return that Firefox will
+然后将值返回，Firefox 将会返回实际使用的值，
+
+233
+00:10:19.820 --> 00:10:22.220
+return the actual used value which is
+它会更小
+
+234
+00:10:22.220 --> 00:10:23.690
+smaller because it needs to be scaled
+因为它需要被缩小
+
+235
+00:10:23.690 --> 00:10:28.580
+down so things are not great in that
+所以在这方面，并不是很好
+
+236
+00:10:28.580 --> 00:10:32.240
+aspect so I've showed you a little of
+所以今天我已经展示了一些
+
+237
+00:10:32.240 --> 00:10:33.710
+what you can do with water radius today
+你可以用 border-radius 做的事情
+
+238
+00:10:33.710 --> 00:10:36.710
+but the future holds so many cool things
+但是对 border-radius 来说，未来还有很多很酷的东西
+
+239
+00:10:36.710 --> 00:10:37.520
+for border-radius
+
+240
+00:10:37.520 --> 00:10:40.280
+because right now in the draft for
+因为目前在
+
+241
+00:10:40.280 --> 00:10:42.020
+backgrounds and waters level 4 there's a
+《Backgrounds And Border Level 4》的草案中
+
+242
+00:10:42.020 --> 00:10:44.090
+property called border cordon shape and
+有一个属性叫作 Border-Corner-Shape
+
+243
+00:10:44.090 --> 00:10:45.980
+obviously many things will change in it
+很显然，其中许多事情都会改变
+
+244
+00:10:45.980 --> 00:10:47.720
+before it makes it into an actual spec
+在它被写入实际的规范之前
+
+245
+00:10:47.720 --> 00:10:50.570
+and into an actual browser I'm hoping
+然后进入到实际的浏览器中
+
+246
+00:10:50.570 --> 00:10:52.010
+the name will change because it's awful
+我希望它的名字能改一下，因为这很糟糕
+
+247
+00:10:52.010 --> 00:10:53.990
+and we're open to suggestions about that
+我们对此都很开放
+
+248
+00:10:53.990 --> 00:10:55.810
+by the way
+顺便一提
+
+249
+00:10:55.810 --> 00:10:58.070
+so border corner shape allows you to
+所以 Border-Corner-Shape 允许你
+
+250
+00:10:58.070 --> 00:11:00.470
+change what border radius does it still
+改变 border-radius 的作用，它仍然遵循
+
+251
+00:11:00.470 --> 00:11:02.420
+follows the size specified by border
+border-radius 指定的值
+
+252
+00:11:02.420 --> 00:11:04.400
+radius but the shape of the corners is
+但是拐角的形状不同了
+
+253
+00:11:04.400 --> 00:11:06.710
+different the default shape is curved
+默认的形状是弯曲的
+
+254
+00:11:06.710 --> 00:11:08.180
+which is what you can do with water
+也就是现在 border-radius 默认的效果
+
+255
+00:11:08.180 --> 00:11:10.910
+radius today you can have bevel 4 cut
+你可以使用  Level 4 剪下拐角
+
+256
+00:11:10.910 --> 00:11:13.280
+out corners and this doesn't just allow
+不仅仅是允许你剪下拐角，
+
+257
+00:11:13.280 --> 00:11:15.080
+you to do cut out corners it allows you
+不仅仅是允许你剪下拐角，
+
+258
+00:11:15.080 --> 00:11:16.520
+to do all sorts of cool stuff for
+它允许你做出各种各样的很酷的效果
+
+259
+00:11:16.520 --> 00:11:18.980
+example rhombi would just be a border
+例如，菱形就是一个
+
+260
+00:11:18.980 --> 00:11:24.850
+radius 50% or hexagons with just this or
+ 50% 的 border-radius，六边形就是这个
+
+261
+00:11:24.850 --> 00:11:30.080
+you can do triangles like this or you
+或者你可以做一些三角形像这样，
+
+262
+00:11:30.080 --> 00:11:34.510
+can do trapezoids by specifying a fixed
+或者你可以做一个体型，通过指定一个固定的
+
+263
+00:11:34.510 --> 00:11:37.220
+horizontal border radius instead of a
+水平 border-radius 而不是一个的百分比，
+
+264
+00:11:37.220 --> 00:11:41.810
+percentage one based one and scoop is
+凹槽也很酷
+
+265
+00:11:41.810 --> 00:11:45.290
+also pretty cool by default it makes
+默认情况下，它创造了这样一种形状，
+
+266
+00:11:45.290 --> 00:11:46.790
+this sort of shape but it can also be
+但是她也可以被利用
+
+267
+00:11:46.790 --> 00:11:48.980
+exploited to do all sorts of cool shapes
+来做出各种各样的酷炫的形状
+
+268
+00:11:48.980 --> 00:11:51.500
+like the starlit looks like this not
+比如像这样的星光
+
+269
+00:11:51.500 --> 00:11:54.440
+just not as useful it doesn't show now
+不仅仅是有用，它没有显示出来
+
+270
+00:11:54.440 --> 00:11:58.010
+because I've specified 50% so not just
+因为我已经指定了 50% ，所以不仅仅是有用
+
+271
+00:11:58.010 --> 00:12:00.410
+not as useful it does it cut out it cuts
+它从每个拐角
+
+272
+00:12:00.410 --> 00:12:03.310
+out rectangles from each corner
+剪下了矩形
+
+273
+00:12:03.310 --> 00:12:05.560
+but it can be used for things like our
+但是它可以被用来做一些像是
+
+274
+00:12:05.560 --> 00:12:08.650
+no crosses for example so imagine the
+“no crosses” 的东西，举个例子
+
+275
+00:12:08.650 --> 00:12:10.570
+possibilities if we get boarder corner
+想象一下如果我们特意使用 border-corner-shape 的可能性，
+
+276
+00:12:10.570 --> 00:12:12.100
+shape especially since we'll actually be
+因为我们实际上
+
+277
+00:12:12.100 --> 00:12:15.279
+able to use different corner shapes for
+将会在每个拐角上
+
+278
+00:12:15.279 --> 00:12:19.750
+each corner however until then since
+使用不同的拐角形状，直到那时
+
+279
+00:12:19.750 --> 00:12:22.779
+this is not in any browser yet you can
+因为这还不能在任意浏览器中实现
+
+280
+00:12:22.779 --> 00:12:24.610
+sort of emulate this effect by using
+你可以模仿这种效果，通过在这里
+
+281
+00:12:24.610 --> 00:12:27.570
+gradients here have used four gradients
+使用 gradient，这里使用了 4 个 gradient
+
+282
+00:12:27.570 --> 00:12:30.100
+one for each quarter you can see how
+每一个负责 1/4 ，你可以看到它是如何工作的
+
+283
+00:12:30.100 --> 00:12:30.850
+this works
+
+284
+00:12:30.850 --> 00:12:33.360
+if I change the color of this one to
+例如如果我将这个的颜色
+
+285
+00:12:33.360 --> 00:12:37.360
+black for example so each of those
+改为黑色，所以其中每一个 gradient
+
+286
+00:12:37.360 --> 00:12:39.910
+gradients covers a quarter and it's a
+都覆盖了1/4，并且它是一个
+
+287
+00:12:39.910 --> 00:12:41.410
+linear gradient with an angle like this
+线性的 gradient，具有一个这样的角
+
+288
+00:12:41.410 --> 00:12:46.630
+and that can change the size of the
+我们可以改变这个效果的大小
+
+289
+00:12:46.630 --> 00:12:48.970
+effect by changing the position of the
+通过改变 color stop（没明白什么意思） 中的位置
+
+290
+00:12:48.970 --> 00:12:52.029
+color stop I've used the second color
+第二个 color stop 的位置是 0，
+
+291
+00:12:52.029 --> 00:12:53.680
+stop has a position of zero so that it
+第二个 color stop 的位置是 0，
+
+292
+00:12:53.680 --> 00:12:55.990
+it it automatically adjusts the fifty
+所以它自动的调整了 50 像素
+
+293
+00:12:55.990 --> 00:12:59.410
+pixels or whatever I specify here so I
+或者任何我在这里设定的值
+
+294
+00:12:59.410 --> 00:13:01.930
+don't have to change two values and this
+所以我不必改变两个值
+
+295
+00:13:01.930 --> 00:13:04.500
+will actually be this would be much more
+如果你将它变成一个 SAS mixin
+
+296
+00:13:04.500 --> 00:13:07.230
+usable if you turn it into a SAS mixin
+这将是，这可能会是更加有用的
+
+297
+00:13:07.230 --> 00:13:09.130
+because I know it has a little
+
+
+298
+00:13:09.130 --> 00:13:10.330
+repetition here
+
+299
+00:13:10.330 --> 00:13:14.770
+and you can use radial gradients in the
+你也可以用同样的方式 
+
+300
+00:13:14.770 --> 00:13:17.290
+same fashion if I change this for
+使用径向 gradient，例如，如果我把这个
+
+301
+00:13:17.290 --> 00:13:19.210
+example to black you can see how it
+改成黑色，你就可以看到它是如何工作的了
+
+302
+00:13:19.210 --> 00:13:21.880
+works or I can change this to green
+或者我把它改成绿色，或者随便别的什么颜色
+
+303
+00:13:21.880 --> 00:13:25.920
+whatever and I can change the size and
+我可以改变大小
+
+304
+00:13:25.920 --> 00:13:28.600
+they work the same way as the scope
+他们和 border-corner-shape 的工作原理相同
+
+305
+00:13:28.600 --> 00:13:32.650
+border corner shape will I know it's not
+我知道这还不完美
+
+306
+00:13:32.650 --> 00:13:35.170
+perfect but it's a way to do it right
+但是这是目前不用任何外部图片或者别的东西的情况下
+
+307
+00:13:35.170 --> 00:13:37.150
+now without using any external images or
+正确做这件事的方法
+
+308
+00:13:37.150 --> 00:13:40.900
+anything so that's actually about it
+所以这就是这些内容了
+
+309
+00:13:40.900 --> 00:13:46.110
+thank you very much
+非常感谢你们
+

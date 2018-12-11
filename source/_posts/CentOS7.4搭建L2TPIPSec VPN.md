@@ -1,6 +1,7 @@
 ---
 title: CentOS7.4搭建L2TP/IPSec VPN Client
 date:  2018.09.07
+copyright: true
 tags: [vpn,linux]
 categories: 
 - [Linux]

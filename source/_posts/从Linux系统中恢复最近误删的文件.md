@@ -1,6 +1,7 @@
 ---
 title: 从Linux系统中恢复最近误删的文件
 date: 2018-10-13 22:14:08
+copyright: true
 tags: [linux]
 categories: 
 - [Linux]

@@ -1,6 +1,7 @@
 ---
 title: Nginx-Windows版开启支持TLSv1.2
 date: 2018-10-17 10:53:27
+copyright: true
 tags: [Nginx,HTTPS]
 categories: 
 - [FE,NGINX]
@@ -37,13 +38,11 @@ ssl_prefer_server_ciphers   on;
 
 腾讯云提供了[工具](https://cloud.tencent.com/product/ssl)可以监测域名是否支持 HTTPS TLS1.2，当前检测可以看到不通过。
 
-{%asset_img ssl-check.png%}
+<div style="width: 600px;margin: auto">{%asset_img ssl-check.png%}</div>
 
 在火狐浏览器中打开网址，点击地址栏左侧的锁图标，可以查看当前域名的 HTTPS 加密协议版本，当前为 TLS 1.0
 
-{%asset_img firefox-tls-version.png%}
-
-
+<div style="width: 600px; margin: auto">{%asset_img firefox-tls-version.png%}</div>
 
 找到了 Nginx 官网文档提供的 HTTPS 配置文档，[Configuring HTTPSS servers](https://nginx.org/en/docs/http/configuring_https_servers.html)
 
@@ -67,8 +66,11 @@ server {
 
 FireFox 中查看域名的 TLS 版本
 
-{%asset_img firefox-tls-version-ok.png%}
+<div style="width:600px; margin:auto">{%asset_img firefox-tls-version-ok.png%}</div>
+
+
 
 腾讯云检测结果
 
-{%asset_img ssl-check-ok.png%}
+<div style="width:600px;margin:auto">{%asset_img ssl-check-ok.png%}</div>
+

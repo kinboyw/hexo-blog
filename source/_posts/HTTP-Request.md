@@ -1,6 +1,7 @@
 ---
 title: HTTP Request
 date: 2018-10-23 13:40:32
+copyright: true
 tags: [HTTP,翻译]
 categories: 
 - [翻译]

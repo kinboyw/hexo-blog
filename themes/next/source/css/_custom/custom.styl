@@ -1,1 +1,42 @@
 // Custom styles.
+
+//文章悬停阴影
+.post:hover {
+   -webkit-box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, .4);
+   -moz-box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, .4);
+}
+
+// 文章内链接文本样式
+.post-body p a{
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+  &:hover {
+    color: #fc6423;
+    border-bottom: none;
+    border-bottom: 1px solid #fc6423;
+  }
+}
+//下载样式
+a#download {
+display: inline-block;
+padding: 0 10px;
+color: #000;
+background: transparent;
+border: 2px solid #000;
+border-radius: 2px
+transition: all .5s ease;
+font-weight: bold;
+&:hover {
+background: #000;
+color: #fff;
+}
+}
+//背景图
+body{
+    background:url(/images/bg08.png);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+}

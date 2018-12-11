@@ -1,6 +1,7 @@
 ---
 title: 使用 Docker 搭建私有NPM仓库
 date: 2018-08-03
+copyright: true
 tags: [npm,docker,sinopia]
 categories: 
 - [FE,工程化]
@@ -26,7 +27,7 @@ docker run --name sinopia -d -p 4873:4873 keyvanfatehi/sinopia
 
 docker运行在代码服务器上，此时通过 http://192.168.12.1:4873 可以访问私有NPM 仓库网页。
 
-{%asset_img 1535445256928.png%}
+<div style="max-width:400px;margin:0 auto">{%asset_img 1535445256928.png%}</div>
 
 <!--more-->
 

@@ -1,16 +1,17 @@
 ---
 title: 一个 JavaScript 可选参数的安全隐患
 date: 2018-10-19 01:33:37
-tags: [JavaScript,前端]
+copyright: true
+tags: [FE,JavaScript]
 categories: 
-- [FE, JavaScript]
+- [FE,JavaScript]
 ---
 
 
 
-​	最近看到这样一条推特
+<div style="max-width:400px;margin:auto">{% asset_img tags-lead.png %}</div>
 
-{%asset_img download.png%}
+<div style="max-width: 400px; margin: auto"> {%asset_img download.png%} </div>
 
 ​	这显然是个棘手的问题，可能大多数程序员会认为这个表达式会返回一个类似  `[1，2，3]` 的数组，如果你在浏览器中输入上面的表达式回车后，就会看到实际返回的是 `[1, NaN, NaN]` 。
 

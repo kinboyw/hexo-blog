@@ -7,9 +7,9 @@ title: Kinboy's note
 subtitle: 前端漫记
 description: FE | Linux 
 keywords: 前端
-author: 王进波
-language: 
-timezone:
+author: kinboy
+language: ZH | EN
+timezone: 
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -73,6 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
+# Anisina，next
 theme: next
 
 # Deployment
@@ -102,3 +103,31 @@ feed:
 sitemap:
   path: sitemap.xml
   template: ./sitemap_template.xml
+  
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+  
+## markdown 渲染引擎配置，默认是hexo-renderer-marked，这个插件渲染速度更快，且有新特性
+markdown:
+  render:
+    html: true
+    xhtmlOut: false
+    breaks: true
+    linkify: true
+    typographer: true
+    quotes: '“”‘’'
+  plugins:
+    - markdown-it-footnote
+    - markdown-it-sup
+    - markdown-it-sub
+    - markdown-it-abbr
+    - markdown-it-emoji
+  anchors:
+    level: 2
+    collisionSuffix: 'v'
+    permalink: true
+    permalinkClass: header-anchor
+    permalinkSymbol: ¶

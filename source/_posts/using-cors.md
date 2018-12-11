@@ -1,7 +1,8 @@
 ---
 title: 使用 CORS （跨域资源共享）
 date: 2018-10-14 21:18:43
-tags: [CORS,web,跨域,FE]
+copyright: true
+tags: [CORS,跨域]
 categories: 
 - [翻译]
 - [FE,CORS]
@@ -15,7 +16,7 @@ categories:
 
   APIs are the threads that let you stitch together a rich web experience. But this experience has a hard time translating to the browser, where the options for cross-domain requests are limited to techniques like [JSON-P](http://en.wikipedia.org/wiki/JSONP)(which has limited use due to security concerns) or setting up a custom proxy (which can be a pain to set up and maintain).
 
-> API 是让你将丰富的 web 体验拼接在一起的纽带。但是在过去，跨域请求被限制只能在一些技术上使用的时候，例如  [JSON-P](http://en.wikipedia.org/wiki/JSONP)(出于安全考虑，使用上有诸多限制)或者设置自定义代理(难于设置和维护)，这些体验是很在浏览器中实现的。
+> API 是让你将丰富的 web 体验拼接在一起的纽带。但是在过去，跨域请求被限制只能在一些技术上使用的时候，例如  [JSON-P](http://en.wikipedia.org/wiki/JSONP)(出于安全考虑，使用上有诸多限制)或者设置自定义代理(难于设置和维护)，这些体验是很难在浏览器中实现的。
 
   [Cross-Origin Resource Sharing](http://www.w3.org/TR/cors/) (CORS) is a W3C spec that allows cross-domain communication from the browser. By building on top of the XMLHttpRequest object, CORS allows developers to work with the same idioms as same-domain requests.
 

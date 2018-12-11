@@ -1,6 +1,7 @@
 ---
 title: Gitlab Docker容器中SSH端口失效问题
 date: 2018-08-06
+copyright: true
 tags: [docker,gitlab,ssh]
 categories: 
 - [Linux]
@@ -22,7 +23,7 @@ sudo ps -aux | gerp sshd
 
 得到如下图所示输出
 
-{% asset_img 1535944132772.png %}
+<div style="max-width:400px;margin:0 auto;">{% asset_img 1535944132772.png %}</div>
 
 <!--more-->
 

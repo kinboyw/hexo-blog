@@ -1,6 +1,7 @@
 ---
 title: 创建一个Git仓库
 date: 2018-7-21 13:24:33
+copyright: true
 tags: git
 categories: 
 - [Git]

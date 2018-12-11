@@ -1,7 +1,8 @@
 ---
 title: Archlinux安装Realtek-8812AU无线网卡驱动
 date: 2018-10-12 12:10:25
-tags: [linux,archlinux,驱动]
+copyright: true
+tags: [linux,archlinux]
 categories: 
 - [Linux]
 ---
@@ -10,7 +11,7 @@ categories:
 
 ​	在公司台式机上装了Arch Linux，自己的笔记本用Windows，用Synergy共享键鼠，由于网口有限，台式机接有线，笔记本连wifi，不在一个网段内，公司网络不稳定，Synergy时不时会断开连接，于是就想把手里的Realtek-8812AU（后面简称无线网卡）用在台式机上，这样台式机和笔记本都连wifi，出问题的概率应该会小一点。
 
-{%asset_img wifi.png%}
+<div style="max-width: 400px; margin: auto"> {%asset_img wifi.png%} </div>
 
 <!--more-->
 
@@ -98,3 +99,7 @@ sudo modprobe -a rtl8812au
 ```
 
 插上USB无线网卡，灯亮！
+
+
+
+更新：内核升级至 4.19 后，无线网卡驱动失效，之前的驱动源码在 4.19 内核下无法编译成功，找到可以成功编译的[驱动源码](https://github.com/kinboyw/rtl8812AU_8821AU_linux)。 

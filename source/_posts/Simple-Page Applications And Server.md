@@ -1,7 +1,8 @@
 ---
 title: 单页面应用与服务器
 date: 2018-09-28 20:25:04
-tags: [架构,单页应用,服务器]
+copyright: true
+tags: [架构,单页应用]
 categories: 
 - [FE,HTTP]
 - [翻译]

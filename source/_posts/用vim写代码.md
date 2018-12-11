@@ -1,7 +1,8 @@
 ---
 title: 用vim写代码
 date: 2018-07-26 09:17:31
-tags: [工具,vim]
+copyright: true
+tags: [vim]
 categories: 
 - [工具,Vim]
 ---

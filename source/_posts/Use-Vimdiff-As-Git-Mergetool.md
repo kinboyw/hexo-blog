@@ -1,6 +1,7 @@
 ---
 title: 使用vimdiff作为git mergetool
 date: 2018-10-09 13:24:33
+copyright: true
 tags: [vim,git]
 categories: 
 - [Git]
