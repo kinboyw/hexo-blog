@@ -23,7 +23,7 @@ console.log(Object.prototype);
 `Object.prototype` 对象有许多内置属性，例如 `toString()` ，`valueOf()`等等。也有一个名为 `constructor` 的属性，它指向 `Object()` 构造函数。
 
 ```JS
-
+console.log(Object.prototype.constructor === Object); // true
 ```
 
 假设原型代表一个函数，方块代表一个对象。下面的图形就描绘出了 `Object()` 函数和 `Object.prototype` 对象之间的关系：
@@ -140,7 +140,9 @@ console.log(a.whoAmI()); // I am a
 我们在 `a` 对象中添加一个新的方法，和 `Foo.prototype` 对象中的方法名字相同。
 
 ```js
-
+a.whoAmI = function() {
+    console.log('This is ' + this.name);
+}
 ```
 
 然后调用这个 `whoAmI` 方法：
