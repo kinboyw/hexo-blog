@@ -16,11 +16,12 @@ categories:
 
 <div style="max-width:1080px;">
 <video style="width:60%;margin:0 auto;display:inherit" controls muted
-src="http://phbiw9gl9.bkt.clouddn.com/video_sub.mp4"
+src="http://cdn.kinboy.wang/video_sub.mp4"
 crossorigin="anonymous">
 <track label="English" kind="subtitles" srclang="en" src="https://kinboyw.github.io/fedemo/resume/video/video.vtt" crossorigin="anonymous" default>
 </video>
 </div>
+
 
 
 

@@ -1,7 +1,5 @@
 # Understanding Nginx HTTP Proxying, Load Balancing, Buffering, and Caching
 
-[LOAD BALANCING](https://www.digitalocean.com/community/tags/load-balancing?type=tutorials) [CACHING](https://www.digitalocean.com/community/tags/caching?type=tutorials) [SCALING](https://www.digitalocean.com/community/tags/scaling?type=tutorials) [NGINX](https://www.digitalocean.com/community/tags/nginx?type=tutorials) [CONCEPTUAL](https://www.digitalocean.com/community/tags/conceptual?type=tutorials) 
-
 ### Introduction
 
 In this guide, we will discuss Nginx's http proxying capabilities, which allow Nginx to pass requests off to backend http servers for further processing. Nginx is often set up as a reverse proxy solution to help scale out infrastructure or to pass requests to other servers that are not designed to handle large client loads.

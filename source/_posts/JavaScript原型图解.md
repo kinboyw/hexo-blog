@@ -3,13 +3,10 @@ title: JavaScript原型图解
 type: categories
 copyright: true
 date: 2018-12-13 21:53:05
-tags:
-categories:
+tags: [FE,JavaScript]
+categories: 
+- [FE,JavaScript]
 ---
-
-总结：JavaScript 原型是每个 JavaScript 开发者必须理解的最重要的概念之一。这篇文章将会帮助你扫清关于原型的所有疑惑。
-
-要看懂本文，需要理解 JavaScript 对象。如果你还不熟悉 JavaScript 对象，就看看这篇[理解 JavaScript 对象](https://kinboy.wang/2018/12/12/%E7%90%86%E8%A7%A3JavaScript%E5%AF%B9%E8%B1%A1/) 。
 
 ## 介绍 JavaScript 原型
 
@@ -29,6 +26,8 @@ console.log(Object.prototype.constructor === Object); // true
 假设原型代表一个函数，方块代表一个对象。下面的图形就描绘出了 `Object()` 函数和 `Object.prototype` 对象之间的关系：
 
 {%asset_img JavaScript-Prototype-300x109.png 300%}
+
+<!--more-->
 
 首先，我们定义一个名为 `Foo` 的函数如下：
 
@@ -104,7 +103,7 @@ console.log(a.constructor === Foo); // true
 
 `__proto__` 是 `Object.prototype` 对象的一个访问器属性。它暴露了一个对象内部的原型链接（`[[Prototype]]`），同时也是通过原型链接被访问的。
 
-`__proto__` 在 ES6 中被标准化，为了浏览器的兼容性。然而未来可能会被废除以支持 `Object.getPrototypeOf()` 。所以，一定不能在生产代码中使用 `__proto__`。 
+`__proto__` 在 ES6 中被标准化，为了浏览器的兼容性。然而未来可能会被废除以支持 `Object.getPrototypeOf()` 。所以，最好不要在生产代码中使用 `__proto__`。 
 
 你可以在前面的图标中看到，`a.__proto__` 暴露了指向 `Foo.prototype` 的 `[[Prototype]]` 。相似的，`b.__proto__` 也指向了和 `a.__proto__` 相同的对象：
 
@@ -155,4 +154,4 @@ console.log(a.whoAmI()); // This is a
 
 这是一个关于 `影子` 的示例。`a` 对象的 `whoAmI()` 方法隐藏了 `a` 连接到的原型对象上的 `whoAmI()` 方法。 
 
-现在你就拦截了关于 JavaScript 原型的所有重要概念，包括 原型链，原型链接，__proto__，以及影子。
+现在你就理解了关于 JavaScript 原型的所有重要概念，包括 原型链，原型链接，__proto__，以及影子。
