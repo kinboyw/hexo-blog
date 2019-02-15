@@ -33,7 +33,7 @@ categories:
 垂直居中布局则因子元素是单行内联文本，多行内联文本以及块级元素而异
 
 - demo1  父元素高度固定，子元素为单行内联文本，设置父元素行高为子元素的 `line-height`
-- demo2 父元素高度固定，子元素为多行内联文本，这时用上面的方法会导致子元素只有第一行在父元素内部，其他行飘出去了，于是要换一种思路，父元素可以设置为 `display:table-cell` 或者 `display:inline-block` ，再在父元素上设置 `vertical-align:middle` ，如果不成功，注意检查外部CSS污染。
+- demo2 父元素高度固定，子元素为多行内联文本，这时用上面的方法会导致子元素只有第一行在父元素内部，其他行飘出去了，于是要换一种思路，父元素设置 CSS  `display:table-cell; vertical-align:middle` ，如果不成功，注意检查外部CSS污染。
 - demo3 子元素是块级元素的时候，使用定位+位移的方式，父元素设置为 `static` 以外的值，子元素 `position:absolute; top:50%;transform:translateY(-50%);`
 - demo4 通用方案，使用 Flex 布局， `display:flex;` ,交叉轴居中对齐 `align-items:center;` 
 
