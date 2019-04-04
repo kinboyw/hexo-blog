@@ -20,6 +20,8 @@ function jsonp(url) {
 }
 ```
 
+<!--more-->
+
 此时我们使用服务端的代码如下：
 
 ```js

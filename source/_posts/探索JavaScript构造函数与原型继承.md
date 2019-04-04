@@ -28,6 +28,8 @@ var myobject = new MyConstructor();
 myobject.constructor == MyConstructor;  // false
 ```
 
+<!--more-->
+
 ## What’s going on? Some definitions
 
 

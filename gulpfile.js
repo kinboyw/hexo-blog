@@ -36,7 +36,12 @@ function htmls(){
   return gulp.src(paths.htmls.src)
   .pipe(htmlclean())
   .pipe(htmlmin({
-      removeComments:true,
+      continueOnParseError:true,
+      collapseWhitespace: true,
+      removeComments: true,
+      removeOptionalTags: true,
+      removeEmptyElements: true,
+      caseSensitive: true,
       minifyJS:true,
       minifyCSS:true,
       minifyURLs:true,
@@ -82,7 +87,7 @@ exports.clean = clean;
 exports.watch = clean;
 exports.styles = styles;
 exports.htmls = htmls;
-exports.scirpts = scripts;
+exports.scripts = scripts;
 exports.images = images;
 exports.build = build;
 

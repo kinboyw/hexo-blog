@@ -14,7 +14,7 @@ The `new` keyword in JavaScript can be quite confusing when it is first encounte
 - What problems does it solve?
 - When is it appropriate and when not?
 
-
+<!--more-->
 
 It does 5 things:
 
