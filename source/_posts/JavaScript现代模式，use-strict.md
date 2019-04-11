@@ -8,7 +8,7 @@ categories:
 - [FE,JavaScript]
 ---
 
-{%asset_img javascript-825x300.jpg %}
+{% asset_img javascript-825x300.jpg %}
 
 很久以来，JavaScript 的发展过程中都不存在兼容性问题。新特性不断添加，但是并没有改变旧的功能。
 

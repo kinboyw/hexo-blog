@@ -11,11 +11,11 @@ categories:
 
 原文：[What's the difference between a tilde (~) and a caret (^) in a npm package.json file?](https://michaelsoolee.com/npm-package-tilde-caret/)
 
-If you use npm to manage packages in your JavaScript application, you’re probably familiar with the package.json file.
+
 
 如果你用 `npm` 来管理 `JavaScript` 应用程序的 `package` ，那你应该熟悉 `package.json` 文件了。
 
-```
+```json
 {
   "devDependencies": {
     "ember-cli": "~2.14.0"
@@ -23,26 +23,23 @@ If you use npm to manage packages in your JavaScript application, you’re proba
 }
 ```
 
-The syntax is in JSON format where the key is the name of the package and the value is the version of the package to be used.
-
 语法是 `JSON` 格式，key 是 package 的名称，value 是要使用的这个 package 的版本号。
 
 <!--more-->
 
-npm uses the package.json file to specify the version of a package that your app depends on.
-
 npm 就是用 `package.json` 文件来声明你的 app 依赖的 package 的版本的。
 
-The version number is in [semver syntax](http://semver.org/) which designates each section with different meaning. semver is broken into three sections separated by a dot.
+版本号以 [semver 语法](http://semver.org/) 表示，它指定每个部分具有不同的含义。semver 被点号划分成 3 各部分。
 
-```
+```shell
 major.minor.patch
 
 1.0.2
 ```
 
-Major, minor and patch represent the different releases of a package.
+Major，minor 和 patch 代表包的不同发行版本。
 
-npm uses the tilde (~) and caret (^) to designate which patch and minor versions to use respectively.
+Npm 用波浪线（~）和插入符（^）来分别指定要使用的 patch（补丁）和 minor（小）版本。
 
-So if you see `~1.0.2` it means to install version `1.0.2` or the latest patch version such as `1.0.4`. If you see `^1.0.2` it means to install version `1.0.2` or the latest minor or patch version such as `1.1.0`.
+所以如果你看到了 `~1.0.2` 就表示要安装 `1.0.2` 或以上的 patch 版本，例如 `1.0.4` 。如果你看到 `^1.0.2` 就表示要安装 `1.0.2` 或者最新的 minor 版本或者 patch 版本，例如 `1.1.0` 。
+

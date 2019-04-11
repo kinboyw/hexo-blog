@@ -8,9 +8,13 @@ categories:
 - [git]
 ---
 
-你可能会碰到这样的情况，你想要将本该在 HEAD 之前提交的修改通过 `git commit --amend` 提交来修改 HEAD。在这样的情况下，你可能会需要回滚你刚刚完成的操作，然后将它应用到正确的提交上。对于简单的修改，你可能会发现 [`git reset -p`](https://blog.pivotal.io/users/khicks/blog/articles/git-reset-p)  很方便。很多情况下修改的内容太多，并且和前面的提交交织在一起，你可能会需要 `git reflog` 帮忙。
+可能会碰到这样的情况，你想要将本该在 HEAD 之前提交的修改通过 `git commit --amend` 提交追加到 HEAD 上了。这样，就需要回滚你刚刚完成的操作，然后将它应用到正确的提交上。对于简单的修改，你可能会发现 [`git reset -p`](https://blog.pivotal.io/users/khicks/blog/articles/git-reset-p)  很方便。很多情况下修改的内容太多，并且和前面的提交交织在一起，你可能会需要 `git reflog` 帮忙。
 
-引用日志记录分支顶端的更新。顶端会在你每次创建新的提交，追加提交，重置提交，切换分支等等操作的时候被更新。基本上，一旦 HEAD 发生了变化，就会生成一次 reflog 记录。因此 reflog 是理解仓库如何进入特定状态的强大工具。
+
+
+<!--more-->
+
+reflog 记录分支顶端的更新。顶端会在你每次创建新的提交，追加提交，重置提交，切换分支等等操作的时候被更新。基本上，一旦 HEAD 发生了变化，就会生成一次 reflog 记录。因此 reflog 是理解仓库如何进入特定状态的强大工具。
 
 `git reflog -2` 会给你 Git 最近两次完成的操作。这种情况下，看起来就像下面：
 
@@ -39,8 +43,6 @@ git commit
 因此，reflog 中的最后两部操作是 **reset** 和 **commit**。
 
 所以，我们能用它做什么？好吧，在 amend（尤其是在 reset 之前）发生之前，**9d3a192** 是 HEAD。8751261是在 amend 操作之后生成的提交。`git diff 8751261..9d3a192` 将会向你展示 amend 中应用了什么修改。
-
-From here, you can use `git apply` to apply the difference from before the amend to after the amend to your working tree via `git diff`:
 
 从这里开始，你可以用 `git apply` 来将 amend 之前到 amend 之后的差异应用到你的工作树，通过 `git diff`：
 
