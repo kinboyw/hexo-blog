@@ -60,6 +60,7 @@ ppp debug = yes
 pppoptfile=/etc/ppp/options.ppp
 length bit = yes
 redial = yes
+autodial = yes
 ```
 
 ```shell
@@ -172,6 +173,12 @@ Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
 172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
 192.168.12.0    0.0.0.0         255.255.255.0   U     100    0        0 enp2s0
 192.168.122.0   0.0.0.0         255.255.255.0   U     0      0        0 virbr0
+```
+
+成功后允许进程自动启动
+
+```shell
+sudo systemctl enable xl2tpd
 ```
 
 
